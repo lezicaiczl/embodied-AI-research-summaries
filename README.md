@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Embodied AI Research Showcase
 
 具身智能方向的研究展示仓库，当前整理多模态感知、视觉语言导航（VLN）与视觉语言动作（VLA）相关数据集和论文。内容依据已有介绍材料编写，后续可继续补充论文、实验、代码和演示视频。
@@ -62,3 +63,6 @@ Robot-Centric Multimodal Video Scene Parsing 数据集。论文材料报告包�
     ├── budvln.md
     └── vesta.md
 ```
+=======
+# embodied-AI-research-summaries
+>>>>>>> 7c5be43c675135bbf3b0438471a1f0085c2c1a7b
