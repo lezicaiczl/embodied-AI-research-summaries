@@ -14,7 +14,7 @@
 | 传感器 | RGB-D 相机、Ouster OS0 LiDAR |
 | 数据模态 | RGB、深度、点云、分割标注 |
 | 场景与规模 | 阅览室、幼儿园、居家等室内场景；现有材料约 15,000 个实例级对象 |
-| 数据集入口 | [XDU Embodied AI Lab 在 ModelScope 的数据集列表](https://www.modelscope.cn/profile/XDUEaiLAB?tab=dataset) |
+| 数据集入口 | [ModelScope 仿真数据集](https://www.modelscope.cn/datasets/XDUEaiLAB/RoboMM-Syn) |
 
 ## RC-MVSP
 
@@ -30,7 +30,7 @@
 | 标注 | 现有材料报告密集标注帧率为 20 FPS |
 | 真实采集设备 | RealSense D435i、Leishen C16 LiDAR |
 | 图像分辨率 | RGB 与深度为 1280×720 |
-| 数据集入口 | [XDU Embodied AI Lab 在 ModelScope 的数据集列表](https://www.modelscope.cn/profile/XDUEaiLAB?tab=dataset) |
+| 数据集入口 | [ModelScope 真实多模态数据集](https://www.modelscope.cn/datasets/XDUEaiLAB/Robot_multimodal_perception_dataset) |
 
 ## 数据使用信息
 

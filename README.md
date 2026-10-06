@@ -26,12 +26,24 @@
 | **视觉语言导航（VLN）** | 形成在线轨迹纠偏训练和局部运动可执行性优化方法，提升连续导航中的指令跟随与碰撞规避能力。 | 在 R2R-CE、RxR-CE 等基准及 Unitree Go2 室内任务上验证。详见[VLN 成果](vln/README.md)。 |
 | **视觉语言动作（VLA）** | 形成面向低带宽远程机器人的压缩鲁棒视觉理解与动作生成方案。 | 在 LIBERO、CALVIN 及 AgileX 机械臂远程操作场景评估。详见[VLA 成果](vla/README.md)。 |
 
+## 成果展示
+
+<p align="center">
+  <img src="assets/showcase/robot-scene-parsing.png" alt="机器人场景解析样例" width="48%" />
+  <img src="assets/showcase/remote-manipulation.png" alt="不同带宽下的远程机器人操作样例" width="48%" />
+</p>
+<p align="center">
+  <sub>机器人多模态场景解析样例</sub>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <sub>AgileX 远程操作示例：高带宽与波动带宽条件</sub>
+</p>
+
 ## 数据资源
 
 | 数据资源 | 内容概览 | 数据集入口 |
 |---|---|---|
-| **Isaac Sim 仿真多模态数据集** | 基于 NVIDIA Isaac Sim 与 GRUtopia 场景资源，使用 Unitree G1 仿真平台采集 RGB-D、点云和分割标注，覆盖多类室内场景与约 15,000 个实例级对象。 | [XDU Embodied AI Lab 的 ModelScope 数据集列表](https://www.modelscope.cn/profile/XDUEaiLAB?tab=dataset) |
-| **RC-MVSP** | Robot-Centric Multimodal Video Scene Parsing，包含 1,000 段视频、100,532 帧和 200 个类别，提供对齐的 RGB-D、点云与 IMU 数据。 | [XDU Embodied AI Lab 的 ModelScope 数据集列表](https://www.modelscope.cn/profile/XDUEaiLAB?tab=dataset) |
+| **Isaac Sim 仿真多模态数据集** | 基于 NVIDIA Isaac Sim 与 GRUtopia 场景资源，使用 Unitree G1 仿真平台采集 RGB-D、点云和分割标注，覆盖多类室内场景与约 15,000 个实例级对象。 | [ModelScope 仿真数据集](https://www.modelscope.cn/datasets/XDUEaiLAB/RoboMM-Syn) |
+| **RC-MVSP** | Robot-Centric Multimodal Video Scene Parsing，包含 1,000 段视频、100,532 帧和 200 个类别，提供对齐的 RGB-D、点云与 IMU 数据。 | [ModelScope 真实多模态数据集](https://www.modelscope.cn/datasets/XDUEaiLAB/Robot_multimodal_perception_dataset) |
 
 更多数据说明、传感器配置与数据卡信息见[数据集目录](datasets/README.md)。
 
