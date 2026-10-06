@@ -1,47 +1,48 @@
-<<<<<<< HEAD
 # Embodied AI Research Showcase
 
-具身智能方向的研究展示仓库，当前整理多模态感知、视觉语言导航（VLN）与视觉语言动作（VLA）相关数据集和论文。内容依据已有介绍材料编写，后续可继续补充论文、实验、代码和演示视频。
+具身智能研究与工程成果展示，围绕机器人多模态感知、视觉语言导航（VLN）和视觉语言动作（VLA），建设数据资源、算法方法与真实机器人验证能力。
 
-> **当前版本：展示初稿。** 部分论文和数据集条目仍待补充。论文中的实验结果如有引用，会明确标注为原论文结果；本仓库暂不声称完成了代码复现。
+<p align="center">
+  <a href="multimodal-perception/README.md">多模态感知</a> &middot;
+  <a href="vln/README.md">视觉语言导航</a> &middot;
+  <a href="vla/README.md">视觉语言动作</a> &middot;
+  <a href="datasets/README.md">数据集</a>
+</p>
 
-## 研究方向
+> **项目状态：** 成果展示与资料整理持续更新中。下表概述现有数据、算法和实验验证；数据规模与实验数字依据现有项目材料整理，具体条件见对应方向页面。
 
-| 方向 | 当前收录 | 简介 |
+## 建设目标
+
+1. 建立覆盖机器人感知、导航和操作的具身智能研究成果展示。
+2. 整理仿真与真实环境中的多模态机器人数据，支持场景解析和算法评估。
+3. 面向真实部署中的关键问题，提升机器人对复杂视觉、自然语言指令和受限通信条件的适应能力。
+4. 通过仿真基准和机器人实验检验方法在连续环境中的执行表现。
+
+## 已有成果
+
+| 方向 | 已形成的能力 | 验证与资源 |
 |---|---|---|
-| [多模态感知](multimodal-perception/README.md) | 2 个数据集、2 篇论文（1 篇待补充） | 面向机器人场景解析，整理仿真与真实环境中的 RGB、深度、点云及 IMU 数据，并关注时序几何建模。 |
-| [VLA](vla/README.md) | 2 篇论文（1 篇待补充） | 关注视觉、语言与动作的联合建模，以及受限带宽下的远程机器人操作。 |
-| [VLN](vln/README.md) | 2 篇论文 | 关注机器人如何依据自然语言指令在连续环境中导航，以及在线纠错、分布偏移与物理可执行性问题。 |
+| **多模态感知** | 建设 Isaac Sim 仿真数据资源与 RC-MVSP 机器人中心视频场景解析数据；研发利用时序几何先验的多模态视频分割方法。 | 覆盖 RGB、深度、点云、IMU 与分割标注；在 VIPSeg、VSPW 和 RC-MVSP 等场景解析基准上评估。详见[多模态感知成果](multimodal-perception/README.md)。 |
+| **视觉语言导航（VLN）** | 形成在线轨迹纠偏训练和局部运动可执行性优化方法，提升连续导航中的指令跟随与碰撞规避能力。 | 在 R2R-CE、RxR-CE 等基准及 Unitree Go2 室内任务上验证。详见[VLN 成果](vln/README.md)。 |
+| **视觉语言动作（VLA）** | 形成面向低带宽远程机器人的压缩鲁棒视觉理解与动作生成方案。 | 在 LIBERO、CALVIN 及 AgileX 机械臂远程操作场景评估。详见[VLA 成果](vla/README.md)。 |
 
-## 数据集
+## 数据资源
 
-### 仿真多模态数据集
+| 数据资源 | 内容概览 | 数据集入口 |
+|---|---|---|
+| **Isaac Sim 仿真多模态数据集** | 基于 NVIDIA Isaac Sim 与 GRUtopia 场景资源，使用 Unitree G1 仿真平台采集 RGB-D、点云和分割标注，覆盖多类室内场景与约 15,000 个实例级对象。 | [XDU Embodied AI Lab 的 ModelScope 数据集列表](https://www.modelscope.cn/profile/XDUEaiLAB?tab=dataset) |
+| **RC-MVSP** | Robot-Centric Multimodal Video Scene Parsing，包含 1,000 段视频、100,532 帧和 200 个类别，提供对齐的 RGB-D、点云与 IMU 数据。 | [XDU Embodied AI Lab 的 ModelScope 数据集列表](https://www.modelscope.cn/profile/XDUEaiLAB?tab=dataset) |
 
-基于 NVIDIA Isaac Sim 与上海人工智能实验室的 GRUtopia 场景资源构建。介绍材料提到室内等代表性场景、约 15,000 个实例级对象，以及 RGB、深度、点云和分割标注；仿真采集平台为 Unitree G1，配置 RGB-D 相机与 Ouster OS0 LiDAR。具体数据集名称、统计口径和下载条目待与 ModelScope 页面核对。
+更多数据说明、传感器配置与数据卡信息见[数据集目录](datasets/README.md)。
 
-### RC-MVSP
+## 研究与验证能力
 
-Robot-Centric Multimodal Video Scene Parsing 数据集。论文材料报告包含 1,000 段视频、100,532 帧、200 个类别，提供对齐的 RGB-D、点云与 IMU 数据，标注帧率为 20 FPS。真实数据采集说明使用 RealSense D435i 与 Leishen C16 LiDAR，RGB/深度分辨率为 1280×720。
-
-> 仓库中数据集介绍依据现有材料整理。数据规模、传感器配置、许可和下载方式以数据集官方页面为准。
-
-## 论文
-
-- **GDAFormer**：几何引导可变形注意力，用于机器人中心的多模态视频全景分割，并介绍 RC-MVSP 数据集。见 [论文介绍](multimodal-perception/gdaformer.md)。
-- **VLN / BudVLN**：通过回溯校正缓解语言指令与偏离状态之间的监督错位。见 [论文介绍](vln/budvln.md)。
-- **VLN / VeSTA**：揭示仿真接触语义掩盖的物理可执行性差距，并通过轨迹分布对齐与风险感知候选选择降低碰撞。见 [论文介绍](vln/vesta.md)。
-- **VLA / CR-VLA**：在压缩视觉输入下恢复特征并提升远程操作鲁棒性。见 [论文介绍](vla/cr-vla.md)。
-- 其余两篇论文：先保留展示位置，待补充标题和材料。
-
-## 数据集主页
-
-[XDU Embodied AI Lab 在 ModelScope 的数据集主页](https://www.modelscope.cn/profile/XDUEaiLAB?tab=dataset)
-
-## 内容说明
-
-- 这是论文与数据集的学习、整理和展示页面，不代表所有项目代码均已公开。
-- 论文作者、发表状态、代码地址和正式数据集卡片等信息待核对后补入。
-- 论文图片、数据样例和第三方材料应遵循各自的版权与使用许可；本仓库初稿不复制原论文配图或数据文件。
+| 能力领域 | 覆盖内容 |
+|---|---|
+| **机器人多模态感知** | RGB、深度、点云、IMU 的时序融合；几何先验编码；视频语义与全景场景解析。 |
+| **连续视觉语言导航** | 自然语言指令跟随；在线策略训练；历史有效状态重锚定；严格接触条件下的局部轨迹选择。 |
+| **远程视觉语言动作** | 压缩退化先验提取；视觉表征恢复；压缩先验注入动作模型；波动带宽下的闭环操作。 |
+| **实验平台** | Isaac Sim 仿真；R2R-CE、RxR-CE、LIBERO、CALVIN 基准；Unitree Go2 和 AgileX 机械臂实机验证。 |
 
 ## 目录
 
@@ -52,17 +53,19 @@ Robot-Centric Multimodal Video Scene Parsing 数据集。论文材料报告包�
 │   └── README.md
 ├── multimodal-perception/
 │   ├── README.md
-│   ├── gdaformer.md
-│   └── paper-2-TODO.md
+│   └── gdaformer.md
 ├── vla/
 │   ├── README.md
-│   ├── cr-vla.md
-│   └── paper-2-TODO.md
+│   └── cr-vla.md
 └── vln/
     ├── README.md
     ├── budvln.md
     └── vesta.md
 ```
-=======
-# embodied-AI-research-summaries
->>>>>>> 7c5be43c675135bbf3b0438471a1f0085c2c1a7b
+
+## 成果说明
+
+- 本仓库用于展示实验室已有研究方向、数据资源、算法方法与验证结果。
+- 实验数字反映现有项目材料所报告的结果；不同平台、基准和测试条件应结合对应页面理解。
+- ModelScope 入口指向实验室数据集列表；具体数据集名称、许可、版本与下载说明以各数据卡为准。
+- 公开数据资源不代表相关算法代码或全部实验资产均已开放。

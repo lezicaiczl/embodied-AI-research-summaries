@@ -1,13 +1,17 @@
 # 多模态感知
 
-聚焦机器人在室内、户外及仿真环境中的多传感器时序感知。现有介绍材料覆盖 RGB、深度、点云和 IMU 数据，以及机器人中心的视频场景解析。
+面向机器人在仿真与真实环境中的多传感器时序感知，建设数据资源并研发结合几何先验的机器人视频场景解析方法。
 
-## 数据集
+## 已有成果
 
-- [Isaac Sim 仿真多模态数据集](../datasets/README.md#1-isaac-sim-仿真多模态数据集)
-- [RC-MVSP](../datasets/README.md#2-rc-mvsp)
+### 仿真与真实多模态数据
 
-## 论文
+- **Isaac Sim 仿真数据：** 基于 GRUtopia 室内场景资源，使用 Unitree G1、RGB-D 相机和 Ouster OS0 LiDAR，生成 RGB、深度、点云与分割标注。
+- **RC-MVSP：** 构建机器人中心的多模态视频场景解析数据，现有材料报告 1,000 段视频、100,532 帧、200 个类别，并提供对齐的 RGB-D、点云与 IMU。
+- 数据集概览和 ModelScope 入口见[数据资源目录](../datasets/README.md)。
 
-- [GDAFormer: Geometry-Guided Deformable Attention for Robot-Centric Multimodal Video Panoptic Segmentation](gdaformer.md)
-- [论文 2：待补充](paper-2-TODO.md)
+### 几何引导的时序场景解析
+
+形成一套几何引导可变形注意力方法，用深度与相机位姿等时序几何信息指导跨帧特征采样和多模态融合，支持机器人视频语义及全景场景解析。方法在 VIPSeg、VSPW 和 RC-MVSP 等数据上进行评估；速度报告采用单张 RTX 4090 的在线网络推理设置，不含离线深度或位姿估计。
+
+技术方案说明见[几何引导场景解析](gdaformer.md)。

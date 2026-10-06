@@ -1,8 +1,17 @@
-# Vision-Language Navigation（VLN）
+# 视觉语言导航（VLN）
 
-整理机器人根据自然语言指令在连续环境中导航的研究，重点关注在线执行时的分布偏移、错误累积、轨迹纠正与物理可执行性。
+面向连续三维环境中的自然语言指令导航，提升在线运行时的轨迹纠偏能力与局部运动可执行性。
 
-## 论文
+## 已有成果
 
-- [BudVLN: Nipping the Drift in the Bud](budvln.md)
-- [VeSTA: Revealing and Bridging the Physical Executability Gap in Vision-Language Navigation](vesta.md)
+### 在线导航轨迹纠偏
+
+形成面向策略在线轨迹的训练流程：对已掌握任务使用群组相对策略优化（GRPO）改进路径效率；对困难任务回到历史轨迹中最远的有效进展状态，保留有效观测历史并生成语义一致的后续监督，降低偏离造成的错误累积。相关方法在 R2R-CE 与 RxR-CE 连续导航基准上评估。
+
+项目页面：[BudVLN](https://6zyyy.github.io/BudVLN/)，论文预印本：[arXiv:2602.06356](https://arxiv.org/abs/2602.06356)。项目页当前将代码状态标为 Coming Soon。
+
+### 局部运动可执行性优化
+
+形成候选轨迹生成与风险感知选择方案：使用严格接触反馈调整候选轨迹分布，再由风险评价器综合任务进度、碰撞和停滞情况选择运动轨迹。仿真评估覆盖 R2R 与 RxR，并在 Unitree Go2 的走廊、卧室和跨房间场景开展实机测试。
+
+方法与验证概览见[局部导航执行能力](vesta.md)。
