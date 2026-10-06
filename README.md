@@ -22,7 +22,7 @@
 
 | 方向 | 已形成的能力 | 验证与资源 |
 |---|---|---|
-| **多模态感知** | 建设 Isaac Sim 仿真数据资源与 RC-MVSP 机器人中心视频场景解析数据；研发利用时序几何先验的多模态视频分割方法。 | 覆盖 RGB、深度、点云、IMU 与分割标注；在 VIPSeg、VSPW 和 RC-MVSP 等场景解析基准上评估。详见[多模态感知成果](multimodal-perception/README.md)。 |
+| **多模态感知与视频融合** | 建设仿真与真实多模态数据资源；研发几何引导场景解析，以及面向多种退化的红外-可见光视频融合方法。 | 覆盖 RGB、深度、点云、IMU 与分割标注；在场景解析和视频融合基准上评估。详见[感知与融合成果](multimodal-perception/README.md)。 |
 | **视觉语言导航（VLN）** | 形成在线轨迹纠偏训练和局部运动可执行性优化方法，提升连续导航中的指令跟随与碰撞规避能力。 | 在 R2R-CE、RxR-CE 等基准及 Unitree Go2 室内任务上验证。详见[VLN 成果](vln/README.md)。 |
 | **视觉语言动作（VLA）** | 形成面向低带宽远程机器人的压缩鲁棒视觉理解与动作生成方案。 | 在 LIBERO、CALVIN 及 AgileX 机械臂远程操作场景评估。详见[VLA 成果](vla/README.md)。 |
 
@@ -53,14 +53,15 @@
 │   └── README.md
 ├── multimodal-perception/
 │   ├── README.md
-│   └── gdaformer.md
+│   ├── robot-video-scene-parsing.md
+│   └── degraded-video-fusion.md
 ├── vla/
 │   ├── README.md
-│   └── cr-vla.md
+│   └── bandwidth-robust-control.md
 └── vln/
     ├── README.md
-    ├── budvln.md
-    └── vesta.md
+    ├── online-nav-training.md
+    └── collision-aware-navigation.md
 ```
 
 ## 成果说明
