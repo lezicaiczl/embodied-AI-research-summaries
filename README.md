@@ -46,26 +46,32 @@
 
 ### 多模态环境感知
 
-面向 RGB、深度、点云和 IMU 等异构信号，研究信号级与特征级融合，并结合时序几何先验进行跨帧特征聚合，输出视频语义与全景场景解析结果。
+围绕机器人多模态数据资源与环境感知成果，利用视觉和时序几何信息开展视频场景解析，并研究多种退化条件下的红外-可见光视频融合。数据资源包含 RGB、深度、点云及语义标注等信息。
 
 ```mermaid
 flowchart LR
-  A[RGB / 深度 / 点云 / IMU] --> B[多模态特征编码]
-  B --> C[时序几何建模与特征融合]
-  C --> D[视频场景解析]
+  A[视觉与时序几何信息] --> B[视频场景解析]
+  C[红外与可见光视频] --> D[多退化视频融合]
 ```
+
+<p align="center">
+  <img src="assets/showcase/multimodal-video-parsing-result.jpg" alt="室内视频场景解析结果" width="82%" />
+</p>
+<p align="center"><sub>室内视频场景解析示例</sub></p>
 
 ### 建图导航与未知环境探索
 
-机器人通过传感器观测完成定位与地图构建，再由全局路径规划和局部运动规划协同生成导航动作。探索算法在仿真环境和真实机器人上开展自由探索测试。
+围绕定位建图、路径规划和陌生环境自主探索开展研究。导航规划采用 A* 全局规划与 DWA 局部规划，并在仿真环境和真实机器人上进行验证。
 
-```mermaid
-flowchart LR
-  A[多模态传感观测] --> B[定位与地图构建]
-  B --> C[A* 全局路径规划]
-  C --> D[DWA 局部运动规划]
-  D --> E[机器人执行与环境更新]
-```
+<p align="center">
+  <img src="assets/showcase/mapping-navigation-framework.png" alt="多模态融合建图与自主导航系统框架" width="100%" />
+</p>
+<p align="center"><sub>多模态融合建图与自主导航框架</sub></p>
+
+<p align="center">
+  <img src="assets/showcase/unknown-environment-exploration.jpg" alt="真实机器人环境探索演示" width="72%" />
+</p>
+<p align="center"><sub>真实环境中的机器人探索演示</sub></p>
 
 ### 视觉语言导航
 
