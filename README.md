@@ -20,6 +20,18 @@
 | 机械臂 | 松灵 Piper |
 | 轮式移动操作平台 | 松灵 Piper 轮式智能车与机械臂 |
 
+<p align="center">
+  <img src="assets/showcase/lab-home-environment.jpg" alt="居家实验环境中的厨房场景" width="48%" />
+  <img src="assets/showcase/lab-home-livingroom.jpg" alt="居家实验环境中的客厅场景" width="48%" />
+</p>
+<p align="center"><sub>厨房与客厅研究场景</sub></p>
+
+<p align="center">
+  <img src="assets/showcase/mobile-manipulator-platform.jpg" alt="轮式移动操作机器人平台" width="48%" />
+  <img src="assets/showcase/humanoid-platform.jpg" alt="人形机器人平台" width="32%" />
+</p>
+<p align="center"><sub>实验室机器人平台</sub></p>
+
 ## 实验室成果
 
 | 方向 | 成果概览 | 数据或验证 |
@@ -66,16 +78,17 @@ flowchart LR
 ## 成果展示
 
 <p align="center">
-  <img src="assets/showcase/lab-home-environment.jpg" alt="室内居家研究与测试场景" width="32%" />
-  <img src="assets/showcase/robot-scene-parsing.png" alt="机器人场景解析样例" width="32%" />
-  <img src="assets/showcase/remote-manipulation.png" alt="不同带宽下的远程机器人操作样例" width="32%" />
+  <img src="assets/showcase/robot-scene-parsing.png" alt="机器人场景解析样例" width="48%" />
+  <img src="assets/showcase/tabletop-manipulation-demo.png" alt="桌面物体操作实验" width="48%" />
 </p>
 <p align="center">
-  <sub>室内居家实验场景</sub>
-  &nbsp;&nbsp;
   <sub>机器人多模态场景解析</sub>
   &nbsp;&nbsp;
-  <sub>AgileX 远程操作：高带宽与波动带宽条件</sub>
+  <sub>桌面机器人操作实验</sub>
 </p>
+<p align="center">
+  <img src="assets/showcase/remote-manipulation.png" alt="不同带宽下的远程机器人操作样例" width="70%" />
+</p>
+<p align="center"><sub>不同网络带宽条件下的远程机器人操作</sub></p>
 
 更多数据配置、算法流程和实验指标见各方向页面。实验结果均应结合对应基准、平台及测试条件理解。
