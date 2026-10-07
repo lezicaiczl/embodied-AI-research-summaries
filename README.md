@@ -4,97 +4,63 @@
 
 <p align="center">
   <a href="#实验室介绍">实验室介绍</a> &middot;
-  <a href="#实验室成果">实验室成果</a> &middot;
-  <a href="#算法介绍">算法介绍</a> &middot;
-  <a href="datasets/README.md">数据资源</a>
+  <a href="#实验室成果">实验室成果</a>
 </p>
 
 ## 实验室介绍
 
-实验室依托西电-荣耀通信互联创新联合实验室建设室内居家研究与测试环境，覆盖客厅、厨房、卧室、健身房等场景，包含 300 余类物体。实验室配备人形、四足、轮式机器人和机械臂，可开展环境感知、建图导航、自主探索及桌面操作研究。
-
-| 平台类型 | 设备 |
-|---|---|
-| 人形机器人 | 智元 X1、宇树 G1 |
-| 四足机器人 | 宇树 Go2 |
-| 机械臂 | 松灵 Piper |
-| 轮式移动操作平台 | 松灵 Piper 轮式智能车与机械臂 |
+实验室依托西电-荣耀通信互联创新联合实验室建设室内居家机器人研究环境，包含客厅、厨房、卧室、健身区等多样化场景，布置有 300 余类物体，并设置不同地面和活动区域以支持机器人实验。
 
 <p align="center">
-  <img src="assets/showcase/lab-home-environment.jpg" alt="居家实验环境中的厨房场景" width="48%" />
-  <img src="assets/showcase/lab-home-livingroom.jpg" alt="居家实验环境中的客厅场景" width="48%" />
+  <img src="assets/showcase/lab-activity-areas.png" alt="机器人实验区、地面和障碍测试布置" width="48%" />
+  <img src="assets/showcase/lab-home-areas.png" alt="实验室居家场景，包括客厅、厨房和卧室" width="48%" />
 </p>
-<p align="center"><sub>厨房与客厅研究场景</sub></p>
+<p align="center"><sub>机器人实验区与居家场景</sub></p>
 
-<p align="center">
-  <img src="assets/showcase/mobile-manipulator-platform.jpg" alt="轮式移动操作机器人平台" width="48%" />
-  <img src="assets/showcase/humanoid-platform.jpg" alt="人形机器人平台" width="32%" />
-</p>
-<p align="center"><sub>实验室机器人平台</sub></p>
+实验室配备人形机器人、四足机器人、机械臂及轮式移动操作平台，可支持从单体操作到移动操作的实验。
+
+<table>
+  <tr>
+    <td align="center" width="50%"><img src="assets/showcase/humanoid-robots-x1-g1.png" alt="智元 X1 与宇树 G1 人形机器人" width="96%" /><br /><strong>人形机器人：智元 X1、宇树 G1</strong></td>
+    <td align="center" width="50%"><img src="assets/showcase/piper-arm.png" alt="松灵 Piper 机械臂桌面操作平台" width="96%" /><br /><strong>机械臂：松灵 Piper</strong></td>
+  </tr>
+  <tr>
+    <td align="center" width="50%"><img src="assets/showcase/unitree-go2.png" alt="宇树 Go2 四足机器人" width="96%" /><br /><strong>四足机器人：宇树 Go2</strong></td>
+    <td align="center" width="50%"><img src="assets/showcase/piper-mobile-manipulator.png" alt="松灵 Piper 轮式智能车与机械臂" width="96%" /><br /><strong>轮式移动操作平台：松灵 Piper 轮式智能车与机械臂</strong></td>
+  </tr>
+</table>
 
 ## 实验室成果
 
-| 方向 | 成果概览 | 数据或验证 |
-|---|---|---|
-| **多模态数据资源** | 建设 Isaac Sim 仿真数据与真实环境机器人多模态数据，提供 RGB、深度、点云和语义标注等信息。仿真数据覆盖约 15,000 个实例；真实数据包含 1,000 段视频、100,532 帧和 200 个语义类别。 | [仿真数据集 RoboMM-Syn](https://www.modelscope.cn/datasets/XDUEaiLAB/RoboMM-Syn)；[真实多模态感知数据集](https://www.modelscope.cn/datasets/XDUEaiLAB/Robot_multimodal_perception_dataset) |
-| **机器人环境感知** | 融合视觉与时序几何信息，研究机器人视频场景解析；同时探索多种退化下的红外-可见光视频融合。 | 在 VIPSeg、VSPW、RC-MVSP 及多退化视频融合数据上评估。详见[多模态感知成果](multimodal-perception/README.md)。 |
-| **建图、导航与自主探索** | 开展机器人定位建图、路径规划和陌生环境自主探索，覆盖仿真演示与实机测试。 | 当前导航规划使用 A* 全局规划与 DWA 局部规划。 |
-| **视觉语言导航** | 研究自然语言指令驱动的连续环境导航，并通过在线训练和历史轨迹校正提升指令跟随能力。 | R2R-CE 上 SR/SPL 为 57.6%/51.1%；RxR-CE 上为 56.1%/46.6%。另在 Unitree Go2 场景开展实机验证。详见[导航成果](vln/README.md)。 |
-| **视觉语言动作** | 支持部署并按任务微调开源视觉语言动作模型；研究压缩视觉输入下的远程机器人操作。 | 覆盖 OpenVLA、π0、SmolVLA 等模型；CALVIN 波动带宽下五步任务成功率为 56.9%，平均完成长度为 3.758。详见[操作成果](vla/README.md)。 |
+### 多模态感知：数据集与算法
 
-## 算法介绍
+建设仿真和真实机器人多模态数据资源，提供 RGB、深度、点云及语义标注；围绕这些数据开展机器人视频场景解析，并研究雨、雾、模糊、噪声等退化条件下的红外-可见光视频融合。仿真数据集 RoboMM-Syn 覆盖约 15,000 个实例；真实数据集包含 1,000 段视频、100,532 帧和 200 个语义类别。
 
-### 多模态环境感知
-
-围绕机器人多模态数据资源与环境感知成果，利用视觉和时序几何信息开展视频场景解析，并研究多种退化条件下的红外-可见光视频融合。数据资源包含 RGB、深度、点云及语义标注等信息。
-
-```mermaid
-flowchart LR
-  A[视觉与时序几何信息] --> B[视频场景解析]
-  C[红外与可见光视频] --> D[多退化视频融合]
-```
+详情包括数据集信息、算法框架和实验结果，见[多模态感知成果介绍](multimodal-perception/README.md)。数据集入口：[RoboMM-Syn 仿真数据集](https://www.modelscope.cn/datasets/XDUEaiLAB/RoboMM-Syn)、[真实机器人多模态感知数据集](https://www.modelscope.cn/datasets/XDUEaiLAB/Robot_multimodal_perception_dataset)。
 
 <p align="center">
-  <img src="assets/showcase/multimodal-video-parsing-result.jpg" alt="室内视频场景解析结果" width="82%" />
+  <img src="assets/showcase/multimodal-video-parsing-result.jpg" alt="室内视频场景解析结果" width="72%" />
 </p>
 <p align="center"><sub>室内视频场景解析示例</sub></p>
 
-### 建图导航与未知环境探索
+### 视觉语言导航（VLN）
 
-围绕定位建图、路径规划和陌生环境自主探索开展研究。导航规划采用 A* 全局规划与 DWA 局部规划，并在仿真环境和真实机器人上进行验证。
+面向连续三维环境中的自然语言指令导航，研究在线轨迹训练与纠偏，并提升局部运动在真实机器人上的可执行性。R2R-CE 上 SR/SPL 为 57.6%/51.1%，RxR-CE 上为 56.1%/46.6%；另在 Unitree Go2 上开展走廊、卧室和跨房间等实机测试。
 
-<p align="center">
-  <img src="assets/showcase/mapping-navigation-framework.png" alt="多模态融合建图与自主导航系统框架" width="100%" />
-</p>
-<p align="center"><sub>多模态融合建图与自主导航框架</sub></p>
+算法流程、仿真指标和实机验证见[视觉语言导航成果介绍](vln/README.md)。
 
-<p align="center">
-  <img src="assets/showcase/unknown-environment-exploration.jpg" alt="真实机器人环境探索演示" width="72%" />
-</p>
-<p align="center"><sub>真实环境中的机器人探索演示</sub></p>
+### 视觉语言动作（VLA）
 
-### 视觉语言导航
+支持部署并按任务微调开源视觉语言动作模型，包括 OpenVLA、π0 和 SmolVLA 等；同时研究压缩视觉输入下的远程机器人操作。现有材料报告 CALVIN 波动带宽条件下五步任务成功率为 56.9%，平均完成长度为 3.758，并在 AgileX 单臂平台开展受限网络链路测试。
 
-模型依据自然语言指令和当前视觉观测预测导航动作，并利用在线轨迹反馈进行训练与校正。困难样本可从历史有效状态继续生成监督，降低偏离后的错误累积。方法与实验摘要见[在线导航训练与轨迹校正](vln/online-nav-training.md)。
-
-### 视觉语言动作与远程操作
-
-视觉语言动作模型将图像和任务指令转化为机械臂动作。针对网络带宽受限的场景，算法提取图像压缩退化信息并用于视觉表征适配和动作生成，评估覆盖多档固定及波动带宽。详情见[低带宽远程操作](vla/bandwidth-robust-control.md)。
-
-## 成果展示
+算法框架、仿真评估和实机结果见[视觉语言动作成果介绍](vla/README.md)。
 
 <p align="center">
-  <img src="assets/showcase/robot-scene-parsing.png" alt="机器人场景解析样例" width="48%" />
-  <img src="assets/showcase/tabletop-manipulation-demo.png" alt="桌面物体操作实验" width="48%" />
+  <img src="assets/showcase/tabletop-manipulation-demo.png" alt="桌面机器人操作实验" width="42%" />
+  <img src="assets/showcase/remote-manipulation.png" alt="不同带宽下的远程机器人操作样例" width="48%" />
 </p>
 <p align="center">
-  <sub>机器人多模态场景解析</sub>
-  &nbsp;&nbsp;
-  <sub>桌面机器人操作实验</sub>
+  <sub>桌面操作实验</sub>&nbsp;&nbsp;<sub>受限带宽下的远程机器人操作</sub>
 </p>
-<p align="center">
-  <img src="assets/showcase/remote-manipulation.png" alt="不同带宽下的远程机器人操作样例" width="70%" />
-</p>
-<p align="center"><sub>不同网络带宽条件下的远程机器人操作</sub></p>
 
-更多数据配置、算法流程和实验指标见各方向页面。实验结果均应结合对应基准、平台及测试条件理解。
+各方向的算法、实验条件与指标请以对应成果页面为准；不同数据集和测试设置下的结果不作直接横向比较。
