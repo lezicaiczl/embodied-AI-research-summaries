@@ -12,8 +12,8 @@
 实验室依托西电-荣耀通信互联创新联合实验室建设室内居家机器人研究环境，包含客厅、厨房、卧室、健身区等多样化场景，布置有 300 余类物体，并设置不同地面和活动区域以支持机器人实验。
 
 <p align="center">
-  <img src="assets/showcase/lab-activity-areas.png" alt="机器人实验区、地面和障碍测试布置" width="48%" />
-  <img src="assets/showcase/lab-home-areas.png" alt="实验室居家场景，包括客厅、厨房和卧室" width="48%" />
+  <img src="assets/showcase/lab-activity-areas.png" alt="机器人实验区、地面和障碍测试布置" height="260" />
+  <img src="assets/showcase/lab-home-areas.png" alt="实验室居家场景，包括客厅、厨房和卧室" height="260" />
 </p>
 <p align="center"><sub>机器人实验区与居家场景</sub></p>
 
