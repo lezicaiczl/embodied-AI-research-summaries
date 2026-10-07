@@ -1,84 +1,81 @@
-# Embodied AI Research Showcase
+# 具身智能实验室
 
-具身智能研究与工程成果展示，围绕机器人多模态感知、视觉语言导航（VLN）和视觉语言动作（VLA），建设数据资源、算法方法与真实机器人验证能力。
+实验室面向机器人在真实环境中的感知、导航与操作，研究如何结合多模态传感、语言理解和机器人控制，让机器人通过与环境交互完成任务。研究与验证覆盖仿真环境、室内居家场景和多类型机器人平台。
 
 <p align="center">
-  <a href="multimodal-perception/README.md">多模态感知</a> &middot;
-  <a href="vln/README.md">视觉语言导航</a> &middot;
-  <a href="vla/README.md">视觉语言动作</a> &middot;
-  <a href="datasets/README.md">数据集</a>
+  <a href="#实验室介绍">实验室介绍</a> &middot;
+  <a href="#实验室成果">实验室成果</a> &middot;
+  <a href="#算法介绍">算法介绍</a> &middot;
+  <a href="datasets/README.md">数据资源</a>
 </p>
 
-> **项目状态：** 成果展示与资料整理持续更新中。下表概述现有数据、算法和实验验证；数据规模与实验数字依据现有项目材料整理，具体条件见对应方向页面。
+## 实验室介绍
 
-## 建设目标
+实验室依托西电-荣耀通信互联创新联合实验室建设室内居家研究与测试环境，覆盖客厅、厨房、卧室、健身房等场景，包含 300 余类物体。实验室配备人形、四足、轮式机器人和机械臂，可开展环境感知、建图导航、自主探索及桌面操作研究。
 
-1. 建立覆盖机器人感知、导航和操作的具身智能研究成果展示。
-2. 整理仿真与真实环境中的多模态机器人数据，支持场景解析和算法评估。
-3. 面向真实部署中的关键问题，提升机器人对复杂视觉、自然语言指令和受限通信条件的适应能力。
-4. 通过仿真基准和机器人实验检验方法在连续环境中的执行表现。
+| 平台类型 | 设备 |
+|---|---|
+| 人形机器人 | 智元 X1、宇树 G1 |
+| 四足机器人 | 宇树 Go2 |
+| 机械臂 | 松灵 Piper |
+| 轮式移动操作平台 | 松灵 Piper 轮式智能车与机械臂 |
 
-## 已有成果
+## 实验室成果
 
-| 方向 | 已形成的能力 | 验证与资源 |
+| 方向 | 成果概览 | 数据或验证 |
 |---|---|---|
-| **多模态感知与视频融合** | 建设仿真与真实多模态数据资源；研发几何引导场景解析，以及面向多种退化的红外-可见光视频融合方法。 | 覆盖 RGB、深度、点云、IMU 与分割标注；在场景解析和视频融合基准上评估。详见[感知与融合成果](multimodal-perception/README.md)。 |
-| **视觉语言导航（VLN）** | 形成在线轨迹纠偏训练和局部运动可执行性优化方法，提升连续导航中的指令跟随与碰撞规避能力。 | 在 R2R-CE、RxR-CE 等基准及 Unitree Go2 室内任务上验证。详见[VLN 成果](vln/README.md)。 |
-| **视觉语言动作（VLA）** | 形成面向低带宽远程机器人的压缩鲁棒视觉理解与动作生成方案。 | 在 LIBERO、CALVIN 及 AgileX 机械臂远程操作场景评估。详见[VLA 成果](vla/README.md)。 |
+| **多模态数据资源** | 建设 Isaac Sim 仿真数据与真实环境机器人多模态数据，提供 RGB、深度、点云和语义标注等信息。仿真数据覆盖约 15,000 个实例；真实数据包含 1,000 段视频、100,532 帧和 200 个语义类别。 | [仿真数据集 RoboMM-Syn](https://www.modelscope.cn/datasets/XDUEaiLAB/RoboMM-Syn)；[真实多模态感知数据集](https://www.modelscope.cn/datasets/XDUEaiLAB/Robot_multimodal_perception_dataset) |
+| **机器人环境感知** | 融合视觉与时序几何信息，研究机器人视频场景解析；同时探索多种退化下的红外-可见光视频融合。 | 在 VIPSeg、VSPW、RC-MVSP 及多退化视频融合数据上评估。详见[多模态感知成果](multimodal-perception/README.md)。 |
+| **建图、导航与自主探索** | 开展机器人定位建图、路径规划和陌生环境自主探索，覆盖仿真演示与实机测试。 | 当前导航规划使用 A* 全局规划与 DWA 局部规划。 |
+| **视觉语言导航** | 研究自然语言指令驱动的连续环境导航，并通过在线训练和历史轨迹校正提升指令跟随能力。 | R2R-CE 上 SR/SPL 为 57.6%/51.1%；RxR-CE 上为 56.1%/46.6%。另在 Unitree Go2 场景开展实机验证。详见[导航成果](vln/README.md)。 |
+| **视觉语言动作** | 支持部署并按任务微调开源视觉语言动作模型；研究压缩视觉输入下的远程机器人操作。 | 覆盖 OpenVLA、π0、SmolVLA 等模型；CALVIN 波动带宽下五步任务成功率为 56.9%，平均完成长度为 3.758。详见[操作成果](vla/README.md)。 |
+
+## 算法介绍
+
+### 多模态环境感知
+
+面向 RGB、深度、点云和 IMU 等异构信号，研究信号级与特征级融合，并结合时序几何先验进行跨帧特征聚合，输出视频语义与全景场景解析结果。
+
+```mermaid
+flowchart LR
+  A[RGB / 深度 / 点云 / IMU] --> B[多模态特征编码]
+  B --> C[时序几何建模与特征融合]
+  C --> D[视频场景解析]
+```
+
+### 建图导航与未知环境探索
+
+机器人通过传感器观测完成定位与地图构建，再由全局路径规划和局部运动规划协同生成导航动作。探索算法在仿真环境和真实机器人上开展自由探索测试。
+
+```mermaid
+flowchart LR
+  A[多模态传感观测] --> B[定位与地图构建]
+  B --> C[A* 全局路径规划]
+  C --> D[DWA 局部运动规划]
+  D --> E[机器人执行与环境更新]
+```
+
+### 视觉语言导航
+
+模型依据自然语言指令和当前视觉观测预测导航动作，并利用在线轨迹反馈进行训练与校正。困难样本可从历史有效状态继续生成监督，降低偏离后的错误累积。方法与实验摘要见[在线导航训练与轨迹校正](vln/online-nav-training.md)。
+
+### 视觉语言动作与远程操作
+
+视觉语言动作模型将图像和任务指令转化为机械臂动作。针对网络带宽受限的场景，算法提取图像压缩退化信息并用于视觉表征适配和动作生成，评估覆盖多档固定及波动带宽。详情见[低带宽远程操作](vla/bandwidth-robust-control.md)。
 
 ## 成果展示
 
 <p align="center">
-  <img src="assets/showcase/robot-scene-parsing.png" alt="机器人场景解析样例" width="48%" />
-  <img src="assets/showcase/remote-manipulation.png" alt="不同带宽下的远程机器人操作样例" width="48%" />
+  <img src="assets/showcase/lab-home-environment.jpg" alt="室内居家研究与测试场景" width="32%" />
+  <img src="assets/showcase/robot-scene-parsing.png" alt="机器人场景解析样例" width="32%" />
+  <img src="assets/showcase/remote-manipulation.png" alt="不同带宽下的远程机器人操作样例" width="32%" />
 </p>
 <p align="center">
-  <sub>机器人多模态场景解析样例</sub>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <sub>AgileX 远程操作示例：高带宽与波动带宽条件</sub>
+  <sub>室内居家实验场景</sub>
+  &nbsp;&nbsp;
+  <sub>机器人多模态场景解析</sub>
+  &nbsp;&nbsp;
+  <sub>AgileX 远程操作：高带宽与波动带宽条件</sub>
 </p>
 
-## 数据资源
-
-| 数据资源 | 内容概览 | 数据集入口 |
-|---|---|---|
-| **Isaac Sim 仿真多模态数据集** | 基于 NVIDIA Isaac Sim 与 GRUtopia 场景资源，使用 Unitree G1 仿真平台采集 RGB-D、点云和分割标注，覆盖多类室内场景与约 15,000 个实例级对象。 | [ModelScope 仿真数据集](https://www.modelscope.cn/datasets/XDUEaiLAB/RoboMM-Syn) |
-| **RC-MVSP** | Robot-Centric Multimodal Video Scene Parsing，包含 1,000 段视频、100,532 帧和 200 个类别，提供对齐的 RGB-D、点云与 IMU 数据。 | [ModelScope 真实多模态数据集](https://www.modelscope.cn/datasets/XDUEaiLAB/Robot_multimodal_perception_dataset) |
-
-更多数据说明、传感器配置与数据卡信息见[数据集目录](datasets/README.md)。
-
-## 研究与验证能力
-
-| 能力领域 | 覆盖内容 |
-|---|---|
-| **机器人多模态感知** | RGB、深度、点云、IMU 的时序融合；几何先验编码；视频语义与全景场景解析。 |
-| **连续视觉语言导航** | 自然语言指令跟随；在线策略训练；历史有效状态重锚定；严格接触条件下的局部轨迹选择。 |
-| **远程视觉语言动作** | 压缩退化先验提取；视觉表征恢复；压缩先验注入动作模型；波动带宽下的闭环操作。 |
-| **实验平台** | Isaac Sim 仿真；R2R-CE、RxR-CE、LIBERO、CALVIN 基准；Unitree Go2 和 AgileX 机械臂实机验证。 |
-
-## 目录
-
-```text
-.
-├── README.md
-├── datasets/
-│   └── README.md
-├── multimodal-perception/
-│   ├── README.md
-│   ├── robot-video-scene-parsing.md
-│   └── degraded-video-fusion.md
-├── vla/
-│   ├── README.md
-│   └── bandwidth-robust-control.md
-└── vln/
-    ├── README.md
-    ├── online-nav-training.md
-    └── collision-aware-navigation.md
-```
-
-## 成果说明
-
-- 本仓库用于展示实验室已有研究方向、数据资源、算法方法与验证结果。
-- 实验数字反映现有项目材料所报告的结果；不同平台、基准和测试条件应结合对应页面理解。
-- ModelScope 入口指向实验室数据集列表；具体数据集名称、许可、版本与下载说明以各数据卡为准。
-- 公开数据资源不代表相关算法代码或全部实验资产均已开放。
+更多数据配置、算法流程和实验指标见各方向页面。实验结果均应结合对应基准、平台及测试条件理解。
