@@ -17,8 +17,6 @@
 </tr>
 </table>
 
-<sub>来源：展示 PPT 第 20 页，演示视频不作为下方独立论文的定量测试证据。</sub>
-
 ## BudVLN
 
 ![BudVLN 训练框架](../assets/research/budvln-framework.png)
@@ -41,5 +39,3 @@
 | 跨房间 | 30% | 45% |
 
 [严格接触仿真测试与实机结果 →](collision-aware-navigation.md)
-
-<sub>每个 Go2 场景每方法测试 20 条指令。BudVLN 与 VeSTA 独立展示，不将不同条件下的数值作直接排名。</sub>

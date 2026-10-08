@@ -98,5 +98,3 @@
 <td width="33%"><img src="assets/research/exploration-simulation.gif" width="100%" alt="未知环境仿真探索动画" /></td>
 </tr>
 </table>
-
-<sub>动态演示均为展示 PPT 中的原始 GIF。PPT 演示与论文实验分别展示，不将演示视频等同于某一论文方法的测试结果。各方法独立评估，具体设置见子页面。</sub>

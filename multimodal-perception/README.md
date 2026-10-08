@@ -37,7 +37,7 @@
 
 ## 建图导航与未知环境探索
 
-| 模块 | PPT 展示配置 |
+| 模块 | 配置 |
 | --- | --- |
 | 输入 | RGB-D、激光雷达、IMU、轮式里程计 |
 | 建图定位 | 前端匹配、后端优化、回环检测、地图构建 |
@@ -49,5 +49,3 @@
 | 建图与路径规划 | 未知环境仿真探索 |
 | --- | --- |
 | ![建图动画](../assets/research/mapping-demo.gif) | ![探索动画](../assets/research/exploration-simulation.gif) |
-
-<sub>来源：展示 PPT 第 7–19 页，MDV-Fusion 论文图 2、图 4。建图探索演示独立于上述感知方法。</sub>

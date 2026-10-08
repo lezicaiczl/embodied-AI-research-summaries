@@ -33,5 +33,3 @@
 ## 融合效果对比
 
 ![MMD-IVF 测试集多退化视觉对比](../assets/research/mdv-comparison.png)
-
-<sub>来源：所提供 MDV-Fusion 论文图 2、表 2、图 4及实验部分。HDO 与 MMD-IVF 为不同测试设置。</sub>

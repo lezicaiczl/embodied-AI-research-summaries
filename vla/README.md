@@ -15,8 +15,6 @@
 | 将杯子放入碗中，再将整体放在盘子上 | ![餐具组合操作 GIF](../assets/research/vla-tableware.gif) |
 | 将香蕉放入白色盘子 | ![香蕉操作 GIF](../assets/research/vla-banana.gif) |
 
-<sub>来源：展示 PPT 第 23 页。PPT 未逐段标注演示所用模型，这里不作额外归属。</sub>
-
 ## CR-VLA：压缩鲁棒远程部署
 
 ![CR-VLA 原始算法框架](../assets/research/crvla-framework.png)
@@ -30,5 +28,3 @@
 ![远程操作场景与压缩输入对比](../assets/research/crvla-real-results.png)
 
 [完整 LIBERO、CALVIN、实机对比表 →](bandwidth-robust-control.md)
-
-<sub>来源：展示 PPT 第 25–26 页及所提供 CR-VLA 论文。</sub>

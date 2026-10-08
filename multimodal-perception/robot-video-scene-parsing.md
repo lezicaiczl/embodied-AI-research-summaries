@@ -19,12 +19,8 @@
 
 ![GDAFormer 原始实验结果表](../assets/research/gdaformer-results.png)
 
-<sub>模型配置、骨干网络与指标见原表。FPS 为 RTX 4090 在线推理，不含离线深度 / 位姿预处理。</sub>
-
 ## 动态结果
 
 | 室内场景 | 室外场景 |
 | --- | --- |
 | ![室内动态分割](../assets/research/indoor-parsing.gif) | ![室外动态分割](../assets/research/outdoor-parsing.gif) |
-
-<sub>来源：展示 PPT 第 13–16 页，GIF 保留源文件动画。</sub>

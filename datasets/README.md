@@ -36,6 +36,4 @@
 
 ### 数据集统计对比
 
-![PPT 中的数据集统计表](../assets/research/dataset-comparison.png)
-
-<sub>来源：展示 PPT 第 7–11、13–14 页。规模采用 PPT 口径；GRUtopia 资源平台总规模不计为 RoboMM-Syn 数据规模。下载文件、划分与许可以数据集页面为准。</sub>
+![数据集统计表](../assets/research/dataset-comparison.png)

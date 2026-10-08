@@ -34,5 +34,3 @@
 ## 轨迹对比
 
 ![BudVLN 与 StreamVLN 的定性轨迹比较](../assets/research/budvln-trajectories.png)
-
-<sub>来源：展示 PPT 第 21–22 页，所提供 BudVLN 论文图 2及实验部分。NE 为距离误差，SR 为成功率，SPL 兼顾成功与路径效率，nDTW 衡量轨迹相似度。</sub>
