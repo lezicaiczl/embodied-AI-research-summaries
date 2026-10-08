@@ -1,0 +1,355 @@
+[
+  {
+    "file": "synthetic-collection.gif",
+    "source": "具身智能实验室展示介绍.pptx",
+    "slide": 7,
+    "picture": 2,
+    "sha256": "d9a0c6fee8bb6ab24d9f435fed4c3f1288cfee12f00c53feddf9e9ba178df1e6",
+    "frames": 604,
+    "duration_ms": 40270,
+    "distinct_frames": 359,
+    "loop": 0
+  },
+  {
+    "file": "indoor-parsing.gif",
+    "source": "具身智能实验室展示介绍.pptx",
+    "slide": 15,
+    "picture": 12,
+    "sha256": "6b953ef25629c7bf083132a1d9006460b6bd586c8891bd70190aea55602f2707",
+    "frames": 50,
+    "duration_ms": 5000,
+    "distinct_frames": 50,
+    "loop": 0
+  },
+  {
+    "file": "outdoor-parsing.gif",
+    "source": "具身智能实验室展示介绍.pptx",
+    "slide": 16,
+    "picture": 3,
+    "sha256": "7798d299c8e27e2e489682ae431d2b9562b934a6e53dea71911ed8c9f1dfcdbd",
+    "frames": 40,
+    "duration_ms": 4000,
+    "distinct_frames": 40,
+    "loop": 0
+  },
+  {
+    "file": "mapping-demo.gif",
+    "source": "具身智能实验室展示介绍.pptx",
+    "slide": 18,
+    "picture": 2,
+    "sha256": "b3ff95f3c082573dfcb1a776bfc20ee34a25c6b17cfc8cd4f057ada432a357db",
+    "frames": 211,
+    "duration_ms": 14110,
+    "distinct_frames": 211,
+    "loop": 0
+  },
+  {
+    "file": "exploration-simulation.gif",
+    "source": "具身智能实验室展示介绍.pptx",
+    "slide": 19,
+    "picture": 1,
+    "sha256": "7a1c866ed9f1738ba032f43200d7415091694ff19133c1e9a12c4312fd4a017c",
+    "frames": 431,
+    "duration_ms": 28770,
+    "distinct_frames": 431,
+    "loop": 0
+  },
+  {
+    "file": "vln-fire-extinguisher.gif",
+    "source": "具身智能实验室展示介绍.pptx",
+    "slide": 20,
+    "picture": 1,
+    "sha256": "ddbb6bbfd952a0db37237b5268a38a84fb8a7f8971d59ad00951ca07b88a3163",
+    "frames": 140,
+    "duration_ms": 9370,
+    "distinct_frames": 140,
+    "loop": 0
+  },
+  {
+    "file": "vln-fridge.gif",
+    "source": "具身智能实验室展示介绍.pptx",
+    "slide": 20,
+    "picture": 3,
+    "sha256": "3a859a3ecd36dc4f5f05b0c6f6465ff655f0e8794ffd5a7572fd3a97d128a347",
+    "frames": 125,
+    "duration_ms": 8430,
+    "distinct_frames": 125,
+    "loop": 0
+  },
+  {
+    "file": "vla-drawer.gif",
+    "source": "具身智能实验室展示介绍.pptx",
+    "slide": 23,
+    "picture": 1,
+    "sha256": "6ffd2cfdb659f1d51cceceb9f11928ac98807b533e8bfdc6444ee3e77853309c",
+    "frames": 190,
+    "duration_ms": 19100,
+    "distinct_frames": 190,
+    "loop": 0
+  },
+  {
+    "file": "vla-tableware.gif",
+    "source": "具身智能实验室展示介绍.pptx",
+    "slide": 23,
+    "picture": 3,
+    "sha256": "e9c6a36ba324c277f7fefd26ae9ff97bb221d52d10ae02677fe89f81aa338c0b",
+    "frames": 171,
+    "duration_ms": 17100,
+    "distinct_frames": 171,
+    "loop": 0
+  },
+  {
+    "file": "vla-banana.gif",
+    "source": "具身智能实验室展示介绍.pptx",
+    "slide": 23,
+    "picture": 5,
+    "sha256": "15e6f780a3d5b2a7f0145d378740d6cac65d77d11dc9a9b01cdb3c3acc8a997d",
+    "frames": 130,
+    "duration_ms": 13100,
+    "distinct_frames": 130,
+    "loop": 0
+  },
+  {
+    "file": "synthetic-scenes.png",
+    "source": "具身智能实验室展示介绍.pptx",
+    "slide": 7,
+    "picture": 1,
+    "sha256": "54456ca494e1fa415ec75268a06cd77167cd922ad27dce1342bab1972ac6131c"
+  },
+  {
+    "file": "synthetic-rgb.png",
+    "source": "具身智能实验室展示介绍.pptx",
+    "slide": 7,
+    "picture": 5,
+    "sha256": "a756a6c308b8926a8158f738155ce8fcef4cc81189eec1b4b35d23a2a9875e6c"
+  },
+  {
+    "file": "synthetic-depth.png",
+    "source": "具身智能实验室展示介绍.pptx",
+    "slide": 7,
+    "picture": 4,
+    "sha256": "43673b19cbb86fdb5d3f8ed36c1c9570e24d2e05609d82ee734a949cda972da6"
+  },
+  {
+    "file": "synthetic-points.png",
+    "source": "具身智能实验室展示介绍.pptx",
+    "slide": 7,
+    "picture": 6,
+    "sha256": "af0d2babdf9c506055aec847ffc0c57bca2ba2458fb52eb582495fa833eb487f"
+  },
+  {
+    "file": "synthetic-labels.png",
+    "source": "具身智能实验室展示介绍.pptx",
+    "slide": 7,
+    "picture": 3,
+    "sha256": "f442aa7b696881c1a2d0202352dfffdadfd494286705328df835c8720959684b"
+  },
+  {
+    "file": "real-collection.png",
+    "source": "具身智能实验室展示介绍.pptx",
+    "slide": 9,
+    "picture": 1,
+    "sha256": "ae4c7ad59d5348be11932e1ec7f369317c207cfffe391cc0f0594e14e7d511aa"
+  },
+  {
+    "file": "real-rgb.png",
+    "source": "具身智能实验室展示介绍.pptx",
+    "slide": 10,
+    "picture": 1,
+    "sha256": "1ae104bcadab40318daea70c032ece3a1eaea95411b36be5e18ea94de6a41103"
+  },
+  {
+    "file": "real-labels.png",
+    "source": "具身智能实验室展示介绍.pptx",
+    "slide": 10,
+    "picture": 2,
+    "sha256": "522b42c1054bcec045b86d5dac950655736f6ef01f69feee10eb2c471be1e6af"
+  },
+  {
+    "file": "gdaformer-framework.png",
+    "source": "具身智能实验室展示介绍.pptx",
+    "slide": 13,
+    "picture": 2,
+    "sha256": "3b564766753ed2b508c7efc56ba8fbb2c244a233ae55e2f900640959993fbdd7"
+  },
+  {
+    "file": "rc-mvsp-examples.png",
+    "source": "具身智能实验室展示介绍.pptx",
+    "slide": 13,
+    "picture": 3,
+    "sha256": "f06f11c1e5a11576ab7970885086743e29463bec7478326668a22612dc2ce2ed"
+  },
+  {
+    "file": "gdaformer-results.png",
+    "source": "具身智能实验室展示介绍.pptx",
+    "slide": 14,
+    "picture": 1,
+    "sha256": "eeedaf0501a3eef4da768db6c863bc61ed76441fdad03aa0dfedfcd9fa4db4b9"
+  },
+  {
+    "file": "dataset-comparison.png",
+    "source": "具身智能实验室展示介绍.pptx",
+    "slide": 14,
+    "picture": 2,
+    "sha256": "33c9082b56cd544854a02e896ee0e453c001f5240f7608b9775ba5c4b2152cdc"
+  },
+  {
+    "file": "budvln-motivation.png",
+    "source": "具身智能实验室展示介绍.pptx",
+    "slide": 21,
+    "picture": 2,
+    "sha256": "0fc713b7d5aa5c9e0f484bfb031484a4ec6df9f8ee94b9b1c633c1178550244f"
+  },
+  {
+    "file": "budvln-results.png",
+    "source": "具身智能实验室展示介绍.pptx",
+    "slide": 22,
+    "picture": 1,
+    "sha256": "a83c779b900214b73d73c79745f332688987ee4c67ef2376649e756da8ae4d89"
+  },
+  {
+    "file": "budvln-trajectories.png",
+    "source": "具身智能实验室展示介绍.pptx",
+    "slide": 22,
+    "picture": 2,
+    "sha256": "fc1fc8ae6abe92bbd51f149b5028590ab43f42a5f4d6e621eaf1f135ee9e72e3"
+  },
+  {
+    "file": "crvla-framework.png",
+    "source": "具身智能实验室展示介绍.pptx",
+    "slide": 25,
+    "picture": 2,
+    "sha256": "30a9f473d3f4dd87ecfaffca81023f73a144cdf48a018c43f40d337dbdba56d8"
+  },
+  {
+    "file": "crvla-real-results.png",
+    "source": "具身智能实验室展示介绍.pptx",
+    "slide": 26,
+    "picture": 1,
+    "sha256": "e0895a94a9e3422a24def58f8485a1b8b9191fcc8ddd7af3a9d7f54de188e614"
+  },
+  {
+    "file": "crvla-libero.png",
+    "source": "具身智能实验室展示介绍.pptx",
+    "slide": 26,
+    "picture": 2,
+    "sha256": "a403ef85d1698de301ab65202454e14cb485fe935f1c037ac5c4c8c7dd05ea78"
+  },
+  {
+    "file": "crvla-calvin.png",
+    "source": "具身智能实验室展示介绍.pptx",
+    "slide": 26,
+    "picture": 3,
+    "sha256": "5e72b3617f6835fd8d58c7fcd52f321bb4798b2d48fa91e97f13ab0f195c8c88"
+  },
+  {
+    "file": "crvla-calvin-fluct.png",
+    "source": "AAAI_CR_VLA__Compression_Robust_Vision_Language_Action_models_for_Remote_Deployment (1).pdf",
+    "page": 6,
+    "region_preview_pixels": [
+      74,
+      480,
+      442,
+      701
+    ]
+  },
+  {
+    "file": "mdv-framework.png",
+    "source": "Multiple_Degradation_aware_Video_Fusion_Network.pdf",
+    "page": 3,
+    "region_preview_pixels": [
+      153,
+      100,
+      765,
+      543
+    ]
+  },
+  {
+    "file": "mdv-results.png",
+    "source": "Multiple_Degradation_aware_Video_Fusion_Network.pdf",
+    "page": 7,
+    "region_preview_pixels": [
+      155,
+      270,
+      761,
+      572
+    ]
+  },
+  {
+    "file": "mdv-comparison.png",
+    "source": "Multiple_Degradation_aware_Video_Fusion_Network.pdf",
+    "page": 7,
+    "region_preview_pixels": [
+      185,
+      582,
+      739,
+      1078
+    ]
+  },
+  {
+    "file": "vesta-framework.png",
+    "source": "面试/main.pdf",
+    "page": 2,
+    "region_preview_pixels": [
+      73,
+      80,
+      846,
+      486
+    ]
+  },
+  {
+    "file": "vesta-r2r.png",
+    "source": "面试/main.pdf",
+    "page": 5,
+    "region_preview_pixels": [
+      73,
+      674,
+      443,
+      950
+    ]
+  },
+  {
+    "file": "vesta-rxr.png",
+    "source": "面试/main.pdf",
+    "page": 5,
+    "region_preview_pixels": [
+      472,
+      128,
+      846,
+      310
+    ]
+  },
+  {
+    "file": "vesta-real.png",
+    "source": "面试/main.pdf",
+    "page": 5,
+    "region_preview_pixels": [
+      472,
+      705,
+      846,
+      1041
+    ]
+  },
+  {
+    "file": "budvln-framework.png",
+    "source": "2602.06356v1.pdf",
+    "page": 4,
+    "region_preview_pixels": [
+      73,
+      78,
+      846,
+      518
+    ]
+  },
+  {
+    "file": "crvla-real-table.png",
+    "source": "AAAI_CR_VLA__Compression_Robust_Vision_Language_Action_models_for_Remote_Deployment (1).pdf",
+    "page": 7,
+    "region_preview_pixels": [
+      75,
+      400,
+      846,
+      545
+    ]
+  }
+]

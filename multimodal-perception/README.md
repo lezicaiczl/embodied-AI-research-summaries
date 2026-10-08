@@ -1,21 +1,53 @@
 # 多模态感知
 
-面向机器人在仿真与真实环境中的多传感器时序感知，建设数据资源并研发机器人环境感知算法。PPT 将该方向概括为“高质量多模态数据集 + 多模态融合感知算法”：针对传感器数据异构、模态差异大和场景语义复杂等问题，结合信号级与特征级融合，并通过深度网络完成环境语义分析与理解。
+[返回主页](../README.md) · [开放数据集](../datasets/README.md)
 
-## 已有成果
+| 成果 | 输入 / 任务 | 图表详情 |
+| --- | --- | --- |
+| RoboMM-Syn / RC-MVSP | 仿真与真实 RGB-D、点云、场景标注 | [数据样例与统计](../datasets/README.md) |
+| GDAFormer | RGB、深度、相机位姿；视频场景解析 | [框架、结果表与动画](robot-video-scene-parsing.md) |
+| MDV-Fusion | 退化红外与可见光视频；视频融合 | [框架与融合结果](degraded-video-fusion.md) |
 
-### 仿真与真实多模态数据
+## 数据集
 
-- **Isaac Sim 仿真数据：** 基于 GRUtopia 室内场景资源，使用 Unitree G1、RGB-D 相机和 Ouster OS0 LiDAR，生成 RGB、深度、点云与分割标注。代表性场景包括阅览室、幼儿园和居家环境，约覆盖 15,000 个实例级对象；RGB 与深度分辨率为 1280×720，每帧点云平均约 300,000 个三维点。
-- **真实机器人多模态视频数据（RC-MVSP）：** 覆盖室内居家与街道、小区、学校、公园等城市户外环境。现有材料报告 1,000 段视频、100,532 帧、200 个类别，并提供对齐的 RGB-D、点云与 IMU；RGB 与深度分辨率为 1280×720，每帧点云平均约 100,000 个三维点。
-- 数据集概览和 ModelScope 入口见[数据资源目录](../datasets/README.md)。
+![多模态视频数据样例](../assets/research/rc-mvsp-examples.png)
 
-### 几何引导的时序场景解析
+| 数据集 | 规模 | 下载 |
+| --- | --- | --- |
+| RoboMM-Syn | 约 15,000 个实例级对象 | [ModelScope](https://www.modelscope.cn/datasets/XDUEaiLAB/RoboMM-Syn) |
+| 真实机器人多模态感知数据集 | 1,000 视频 / 100,532 帧 / 200 类 | [ModelScope](https://www.modelscope.cn/datasets/XDUEaiLAB/Robot_multimodal_perception_dataset) |
 
-结合深度与相机位姿等时序几何信息，指导跨帧特征采样和多模态融合，支持机器人视频语义及全景场景解析。PPT 展示的算法演示覆盖室内与室外机器人场景；方法在 VIPSeg、VSPW 和 RC-MVSP 等数据上进行评估。速度报告采用单张 RTX 4090 的在线网络推理设置，不含离线深度或位姿估计。
+## GDAFormer：几何引导视频场景解析
 
-算法框架与评估概览见[几何引导的视频场景解析](robot-video-scene-parsing.md)。
+![GDAFormer 原始算法框架](../assets/research/gdaformer-framework.png)
 
-### 多退化红外-可见光视频融合
+| 室内动态结果 | 室外动态结果 |
+| --- | --- |
+| ![室内分割 GIF](../assets/research/indoor-parsing.gif) | ![室外分割 GIF](../assets/research/outdoor-parsing.gif) |
 
-面向雨、雾、模糊、噪声及条纹噪声等单一或混合退化，融合红外显著目标与可见光纹理，并利用跨帧对齐提升视频连续性。算法框架和结果摘要见[多退化视频融合](degraded-video-fusion.md)。
+[完整实验对比 →](robot-video-scene-parsing.md)
+
+## MDV-Fusion：多退化视频融合
+
+![MDV-Fusion 论文框架图](../assets/research/mdv-framework.png)
+
+![MDV-Fusion 多退化场景融合结果](../assets/research/mdv-comparison.png)
+
+[完整指标表与实验设置 →](degraded-video-fusion.md)
+
+## 建图导航与未知环境探索
+
+| 模块 | PPT 展示配置 |
+| --- | --- |
+| 输入 | RGB-D、激光雷达、IMU、轮式里程计 |
+| 建图定位 | 前端匹配、后端优化、回环检测、地图构建 |
+| 已展示规划算法 | A* 全局规划、DWA 局部规划 |
+| 探索展示 | 仿真环境自主探索 |
+
+![多模态融合建图与自主导航系统架构](../assets/showcase/mapping-navigation-framework.png)
+
+| 建图与路径规划 | 未知环境仿真探索 |
+| --- | --- |
+| ![建图动画](../assets/research/mapping-demo.gif) | ![探索动画](../assets/research/exploration-simulation.gif) |
+
+<sub>来源：展示 PPT 第 7–19 页，MDV-Fusion 论文图 2、图 4。建图探索演示独立于上述感知方法。</sub>

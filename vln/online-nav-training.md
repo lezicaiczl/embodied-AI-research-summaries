@@ -1,38 +1,38 @@
-# 在线导航训练与轨迹校正
+# BudVLN：回溯校正与在线训练
 
-## 方法框架
+[返回 VLN](README.md) · [实验室主页](../README.md) · [开源项目](https://6zyyy.github.io/BudVLN/)
 
-训练时先用当前策略进行在线探测，再根据任务难度和完成情况动态选择更新路径。对于已掌握或相对容易的任务，通过组内采样和 GRPO 强化更有效率的轨迹；对于尚未解决的困难任务，回到策略历史中最远的有效进展状态，保留该状态之前的观测历史，并生成与指令语义一致的后续监督，减少直接从错误状态恢复造成的指令—状态错位。
+*Nipping the Drift in the Bud: Retrospective Rectification for Robust Vision-Language Navigation*
 
-```mermaid
-flowchart TD
-  A[指令与当前策略] --> B[贪心在线探测]
-  B --> C{当前任务难度与完成情况}
-  C -->|已掌握 / 相对容易| D[采样多条候选轨迹]
-  D --> E[按成功与路径效率计算组内优势]
-  E --> F[GRPO 更新]
-  C -->|困难 / 尚未完成| G[定位最远有效历史状态]
-  G --> H[保留有效观测前缀并回溯]
-  H --> I[生成到目标的后续监督]
-  I --> J[SFT 更新]
-```
+| 环节 | 方法 |
+| --- | --- |
+| 任务探测 | Greedy Probe 判断当前任务完成情况 |
+| 成功轨迹 | GRPO 优化路径效率 |
+| 失败轨迹 | 回溯至有效历史状态，生成与指令一致的监督轨迹 |
+| 动态训练 | 根据探测结果选择 GRPO 或 SFT |
 
-## 结果概览
+## 问题与算法框架
 
-| 基准 | 指标 | 结果 | 对照结果 |
-|---|---:|---:|---:|
-| R2R-CE Val-Unseen | SR | 57.6% | 同表最强对照 57.0% |
-| R2R-CE Val-Unseen | SPL | 51.1% | 同表最强对照 50.5% |
-| RxR-CE Val-Unseen | SR | 56.1% | 同表最强对照 52.9% |
-| RxR-CE Val-Unseen | SPL | 46.6% | 同表最强对照 46.0% |
+![指令状态错位与回溯校正示意](../assets/research/budvln-motivation.png)
 
-PPT 的完整对比表还报告了以下指标：
+![BudVLN 原始训练框架](../assets/research/budvln-framework.png)
 
-| 基准 | NE ↓ | OS ↑ | SR ↑ | SPL ↑ | nDTW ↑ |
-|---|---:|---:|---:|---:|---:|
-| R2R-CE Val-Unseen | 4.74 | 65.6% | 57.6% | 51.1% | — |
-| RxR-CE Val-Unseen | 5.79 | — | 56.1% | 46.6% | 63.2% |
+## 实验结果
 
-其中 NE 为导航误差，OS 为 oracle success；SPL 与 nDTW 衡量成功与路径效率。破折号表示 PPT 的对应结果表未报告该项。
+![BudVLN 与基线的原始结果表](../assets/research/budvln-results.png)
 
-在报告的 R2R-CE 训练时长对比中，该流程用 27 小时达到 57.6% SR；对照 DAgger 流程为 114 小时、57.1% SR。训练时长受硬件和实现影响，仅代表材料所列实验设置。
+| 数据集 / 划分 | NE ↓ | OS ↑ | SR ↑ | SPL ↑ | nDTW ↑ |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| R2R-CE Val Unseen | 4.74 | 65.6 | 57.6 | 51.1 | — |
+| RxR-CE Val Unseen | 5.79 | — | 56.1 | 46.6 | 63.2 |
+
+| 训练对比 | 时间 | R2R-CE SR |
+| --- | ---: | ---: |
+| DAgger | 114 h | 57.1 |
+| BudVLN | 27 h | 57.6 |
+
+## 轨迹对比
+
+![BudVLN 与 StreamVLN 的定性轨迹比较](../assets/research/budvln-trajectories.png)
+
+<sub>来源：展示 PPT 第 21–22 页，所提供 BudVLN 论文图 2及实验部分。NE 为距离误差，SR 为成功率，SPL 兼顾成功与路径效率，nDTW 衡量轨迹相似度。</sub>

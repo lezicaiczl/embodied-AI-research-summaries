@@ -1,19 +1,45 @@
-# 视觉语言导航（VLN）
+# 视觉语言导航 VLN
 
-面向连续三维环境中的自然语言指令导航，提升在线运行时的轨迹纠偏能力与局部运动可执行性。
+[返回主页](../README.md)
 
-演示任务包括“出门右转，在红色灭火器前停下”，以及“直行走出房间，进入左边的房间，在冰箱前停下”。机器人需要结合当前视觉观测理解目标位置，并在连续运动过程中根据新观测调整导航动作。
+| 方法 | 研究内容 | 图表详情 |
+| --- | --- | --- |
+| BudVLN | 回溯校正、GRPO / SFT 动态在线学习 | [算法框架与导航结果](online-nav-training.md) |
+| VeSTA | 严格接触反馈、候选轨迹优化、可通行风险评估 | [框架与无碰撞导航结果](collision-aware-navigation.md) |
 
-## 已有成果
+## 语言指令实机演示
 
-### 在线导航轨迹纠偏
+<table>
+<tr><th width="50%">出门右转，在红色灭火器前停下</th><th width="50%">直行走出房间，进入左边的房间，在冰箱前停下</th></tr>
+<tr>
+<td align="center"><img src="../assets/research/vln-fire-extinguisher.gif" height="420" alt="灭火器目标导航动画" /></td>
+<td align="center"><img src="../assets/research/vln-fridge.gif" height="420" alt="冰箱目标导航动画" /></td>
+</tr>
+</table>
 
-形成面向策略在线轨迹的训练流程：当机器人已掌握任务时，使用群组相对策略优化（GRPO）改进路径效率；当任务尚未完成时，回到历史轨迹中最远的有效进展状态，保留有效观测历史并生成与原指令语义一致的后续监督，降低偏离造成的错误累积。在 R2R-CE 与 RxR-CE 连续导航基准上评估。
+<sub>来源：展示 PPT 第 20 页，演示视频不作为下方独立论文的定量测试证据。</sub>
 
-算法框架与基准结果见[在线导航训练与轨迹校正](online-nav-training.md)。
+## BudVLN
 
-### 局部运动可执行性优化
+![BudVLN 训练框架](../assets/research/budvln-framework.png)
 
-形成候选轨迹生成与风险感知选择方案：使用严格接触反馈调整候选轨迹分布，再由风险评价器综合任务进度、碰撞和停滞情况选择运动轨迹。仿真评估覆盖 R2R 与 RxR，并在 Unitree Go2 的走廊、卧室和跨房间场景开展实机测试。
+| Val Unseen | SR ↑ | SPL ↑ |
+| --- | ---: | ---: |
+| R2R-CE | 57.6 | 51.1 |
+| RxR-CE | 56.1 | 46.6 |
 
-算法框架与仿真、实机结果见[碰撞感知的局部导航](collision-aware-navigation.md)。
+[完整实验表与轨迹对比 →](online-nav-training.md) · [开源项目](https://6zyyy.github.io/BudVLN/)
+
+## VeSTA
+
+![VeSTA 原始算法框架](../assets/research/vesta-framework.png)
+
+| Go2 场景 | DualVLN 无碰撞成功率 | VeSTA 无碰撞成功率 |
+| --- | ---: | ---: |
+| 走廊 | 80% | 95% |
+| 单卧室 | 55% | 65% |
+| 跨房间 | 30% | 45% |
+
+[严格接触仿真测试与实机结果 →](collision-aware-navigation.md)
+
+<sub>每个 Go2 场景每方法测试 20 条指令。BudVLN 与 VeSTA 独立展示，不将不同条件下的数值作直接排名。</sub>

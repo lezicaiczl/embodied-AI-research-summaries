@@ -1,40 +1,30 @@
-# 几何引导的机器人视频场景解析
+# GDAFormer：几何引导视频场景解析
 
-## 方法框架
+[返回多模态感知](README.md) · [实验室主页](../README.md)
 
-面向机器人连续运动中的视频语义与全景解析，将 RGB 外观特征与深度、相机位姿形成的时序几何信息结合。几何关系用于指导跨帧采样位置，使网络优先聚合与当前场景结构相对应的信息。
+| 输入 | 关键模块 | 输出 |
+| --- | --- | --- |
+| RGB 视频、深度、相机位姿 | 时序几何编码、G2-DAB 几何引导可变形注意力 | 视频语义 / 全景分割 |
+| 多尺度视觉特征 | 动态采样与跨帧特征聚合 | 时序场景解析结果 |
 
-```mermaid
-flowchart LR
-  A[RGB 视频帧] --> C[多尺度视觉特征]
-  B[深度与相机位姿] --> D[时序几何编码]
-  C --> E[几何引导的可变形注意力]
-  D --> E
-  E --> F[跨帧特征聚合]
-  F --> G[语义 / 全景解析结果]
-```
+## 算法框架
 
-## 结果概览
+![GDAFormer 原始框架图](../assets/research/gdaformer-framework.png)
 
-- 在 VIPSeg、VSPW 与机器人中心视频场景解析数据上进行评估。下表按配置 1、配置 2 汇总 PPT 中 RGB 与 RGB-D+位姿输入对应的结果。
-- 通过几何先验与动态跨帧采样增强视频场景解析；实验材料同时展示了多模态输入与机器人视角下的解析应用。
-- PPT 中的算法演示覆盖室内居家场景与室外道路场景，展示机器人视角下对墙面、家具、道路、行人等区域的逐帧语义解析。
+## 数据与实验对比
 
-| 配置 | 输入 | 在线速度（FPS） | VIPSeg VPQ / STQ | RC-MVSP VPQ / STQ / mIoU | VSPW mIoU |
-|---|---|---:|---:|---:|---:|
-| 配置 1 | RGB | 29.9 | 44.4 / 40.2 | 42.3 / 34.1 / 51.1 | 53.4 |
-| 配置 1 | RGB-D + 位姿 | 28.1 | 47.5 / 43.5 | 44.6 / 36.2 / 52.8 | 55.0 |
-| 配置 2 | RGB | 18.2 | 52.9 / 49.4 | 57.7 / 45.1 / 59.6 | 62.1 |
-| 配置 2 | RGB-D + 位姿 | 14.1 | 54.8 / 50.7 | 58.3 / 45.6 / 61.6 | 63.7 |
+![RC-MVSP 场景示例](../assets/research/rc-mvsp-examples.png)
 
-在 PPT 所列设置中，增加深度与位姿输入后，多数场景解析指标提升；在线速度相应下降，且 VSPW mIoU 在配置 2 下略低于 RGB 单模态结果。不同模型设置的速度与精度应结合输入方式一并解读。
+![数据集统计对比](../assets/research/dataset-comparison.png)
 
-- 速度测试采用单张 RTX 4090，统计在线网络推理，不包含离线深度和位姿估计。
+![GDAFormer 原始实验结果表](../assets/research/gdaformer-results.png)
 
-<p align="center">
-  <img src="../assets/showcase/multimodal-video-parsing-result.jpg" alt="室内机器人视角下的视频场景解析" width="48%" />
-  <img src="../assets/showcase/multimodal-outdoor-parsing-result.jpg" alt="室外机器人视角下的视频场景解析" width="48%" />
-</p>
-<p align="center"><sub>室内与室外场景解析演示</sub></p>
+<sub>模型配置、骨干网络与指标见原表。FPS 为 RTX 4090 在线推理，不含离线深度 / 位姿预处理。</sub>
 
-具体指标应与对应基准、输入模态和测试设置一并报告；此处不将不同设置下的数值合并比较。
+## 动态结果
+
+| 室内场景 | 室外场景 |
+| --- | --- |
+| ![室内动态分割](../assets/research/indoor-parsing.gif) | ![室外动态分割](../assets/research/outdoor-parsing.gif) |
+
+<sub>来源：展示 PPT 第 13–16 页，GIF 保留源文件动画。</sub>

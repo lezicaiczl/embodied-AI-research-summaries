@@ -1,30 +1,42 @@
-# 碰撞感知的局部导航
+# VeSTA：可执行性与无碰撞导航
 
-## 方法框架
+[返回 VLN](README.md) · [实验室主页](../README.md)
 
-针对仿真接触处理可能掩盖不可执行动作的问题，保持高层导航策略不变，仅优化局部候选运动：先用严格接触反馈调整候选轨迹分布，再由风险评价器比较候选的任务进度、碰撞与停滞风险，选出一条轨迹并滚动闭环执行。
+*Revealing and Bridging the Physical Executability Gap in Vision-Language Navigation*
 
-```mermaid
-flowchart LR
-  A[当前视觉观测与局部目标] --> B[候选局部轨迹生成]
-  B --> C[严格接触反馈]
-  C --> D[调整候选分布]
-  D --> E[风险感知候选评分]
-  E --> F[选择并执行轨迹前缀]
-  F --> G[新观测与局部重规划]
-  G --> B
-```
+| 模块 | 功能 |
+| --- | --- |
+| TR-GRPO | 利用严格接触反馈优化候选轨迹分布 |
+| Traversability Risk Critic（TRiC） | 综合进展、接触与停滞信号评估候选轨迹 |
+| 滚动执行 | 选择候选轨迹、执行局部前缀、重新规划 |
 
-## 结果概览
+## 算法框架
 
-| 场景 / 基准 | 指标 | 基线 | 优化后 |
-|---|---:|---:|---:|
-| R2R Val-Unseen，严格接触 | SR | 51.50% | 53.56% |
-| R2R Val-Unseen，严格接触 | 步数加权碰撞负担 | 34.00% | 12.73% |
-| RxR Val-Unseen，严格接触 | SR | 41.54% | 42.41% |
-| RxR Val-Unseen，严格接触 | 步数加权碰撞负担 | 39.17% | 15.53% |
-| Unitree Go2 走廊 | 无碰撞成功率 | 80% | 95% |
-| Unitree Go2 单卧室 | 无碰撞成功率 | 55% | 65% |
-| Unitree Go2 跨房间 | 无碰撞成功率 | 30% | 45% |
+![VeSTA 候选生成与风险选择框架](../assets/research/vesta-framework.png)
 
-实机每种场景、每种方法测试 20 条指令。实机结果为有限场景下的受控验证，不构成完整安全认证；导航指标的小幅变化为描述性结果，主要证据是严格接触条件下碰撞负担下降。
+## 严格接触条件下的结果
+
+![R2R 完整结果与表注](../assets/research/vesta-r2r.png)
+
+![RxR 完整结果与表注](../assets/research/vesta-rxr.png)
+
+| 测试集 | 方法 | SR ↑ | Coll. W. ↓ |
+| --- | --- | ---: | ---: |
+| R2R Val Unseen | DualVLN | 51.50 | 34.00 |
+| R2R Val Unseen | VeSTA | 53.56 | 12.73 |
+| RxR Val Unseen | DualVLN | 41.54 | 39.17 |
+| RxR Val Unseen | VeSTA | 42.41 | 15.53 |
+
+<sub>Coll. W. 为按执行步数加权的碰撞负担，数值为百分比，不是碰撞次数。</sub>
+
+## Go2 实机测试
+
+![Go2 三类场景无碰撞成功率原图](../assets/research/vesta-real.png)
+
+| 场景 | 每方法指令数 | DualVLN CFSR | VeSTA CFSR |
+| --- | ---: | ---: | ---: |
+| 走廊 | 20 | 80% | 95% |
+| 单卧室 | 20 | 55% | 65% |
+| 跨房间 | 20 | 30% | 45% |
+
+<sub>来源：所提供 VeSTA 论文图 2、表 1–2、图 4。CFSR 要求完成目标且全程无物理接触。</sub>

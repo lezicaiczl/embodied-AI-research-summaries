@@ -1,40 +1,41 @@
-# 数据资源
+# 开放多模态数据集
 
-围绕机器人多模态场景感知，整理仿真与真实环境中的传感器数据资源，为视频场景解析和具身算法验证提供数据基础。两套数据均包括视觉与几何信息，覆盖室内居家场景；真实数据还覆盖城市户外环境。
+[返回主页](../README.md) · [多模态感知成果](../multimodal-perception/README.md)
 
-## Isaac Sim 仿真多模态数据集
+| 项目 | RoboMM-Syn 仿真数据集 | 真实机器人多模态感知数据集 |
+| --- | --- | --- |
+| 下载 | [ModelScope](https://www.modelscope.cn/datasets/XDUEaiLAB/RoboMM-Syn) | [ModelScope](https://www.modelscope.cn/datasets/XDUEaiLAB/Robot_multimodal_perception_dataset) |
+| 场景 | 阅览室、幼儿园、居家等 | 客厅、厨房、卧室、街道、小区、学校、公园等 |
+| 规模 | 约 15,000 个实例级对象 | 1,000 段视频、100,532 帧、200 类 |
+| RGB / 深度 | 1280 × 720 | 1280 × 720 |
+| 平均点云规模 | 约 300,000 点 / 帧 | 约 100,000 点 / 帧 |
+| 平台 | Isaac Sim、GRUtopia 场景资源、宇树 G1 | 自建多模态采集设备 |
+| 传感器 | RGB-D 相机、Ouster OS0 LiDAR | RealSense D435i、Leishen C16 LiDAR |
+| 数据 | RGB、深度、点云、分割标注 | 对齐 RGB-D、点云、IMU 与场景标注 |
 
-基于 NVIDIA Isaac Sim 与 GRUtopia 场景资源构建，使用 Unitree G1 仿真平台采集多模态观测。PPT 中展示的代表性场景包括阅览室、幼儿园和居家环境。GRUtopia（桃源）提供交互式三维场景资源，PPT 介绍其包含 89 个场景和约 10 万个交互环境要素，可用于多场景数据生成并降低真实数据采集成本。
+## RoboMM-Syn
 
-| 项目 | 内容 |
-|---|---|
-| 仿真平台 | NVIDIA Isaac Sim |
-| 场景资源 | GRUtopia |
-| 机器人 | Unitree G1（仿真） |
-| 传感器 | RGB-D 相机、Ouster OS0 LiDAR |
-| 数据模态 | RGB、深度、点云、分割标注 |
-| 图像分辨率 | RGB 与深度为 1280×720 |
-| 点云 | 每帧平均约 300,000 个三维空间点 |
-| 场景与规模 | 阅览室、幼儿园、居家等室内场景；约 15,000 个实例级对象 |
-| 数据集入口 | [ModelScope 仿真数据集](https://www.modelscope.cn/datasets/XDUEaiLAB/RoboMM-Syn) |
+<table>
+<tr><th>RGB</th><th>深度</th></tr>
+<tr><td width="50%"><img src="../assets/research/synthetic-rgb.png" width="100%" alt="仿真 RGB" /></td><td width="50%"><img src="../assets/research/synthetic-depth.png" width="100%" alt="仿真深度" /></td></tr>
+<tr><th>点云</th><th>分割标注</th></tr>
+<tr><td><img src="../assets/research/synthetic-points.png" width="100%" alt="仿真点云" /></td><td><img src="../assets/research/synthetic-labels.png" width="100%" alt="仿真分割标注" /></td></tr>
+</table>
 
-## RC-MVSP
+![仿真数据采集动态演示](../assets/research/synthetic-collection.gif)
 
-**全称：** Robot-Centric Multimodal Video Scene Parsing
+## 真实数据采集与 RC-MVSP
 
-面向机器人中心的多模态视频场景解析，提供传感器对齐的时序观测与语义标注。采集场景覆盖室内家居，也包括街道、小区、学校、公园等城市户外环境。
+![真实多模态采集与标注流程](../assets/research/real-collection.png)
 
-| 项目 | 内容 |
-|---|---|
-| 数据规模 | 1,000 段视频、100,532 帧 |
-| 类别数量 | 200 个语义类别 |
-| 数据模态 | 对齐的 RGB-D、点云与 IMU |
-| 标注 | 现有材料报告密集标注帧率为 20 FPS |
-| 真实采集设备 | RealSense D435i、Leishen C16 LiDAR |
-| 图像分辨率 | RGB 与深度为 1280×720 |
-| 点云 | 每帧平均约 100,000 个三维空间点 |
-| 数据集入口 | [ModelScope 真实多模态数据集](https://www.modelscope.cn/datasets/XDUEaiLAB/Robot_multimodal_perception_dataset) |
+![RC-MVSP 场景与模态样例](../assets/research/rc-mvsp-examples.png)
 
-## 数据使用信息
+| RGB 样例 | 分割标注样例 |
+| --- | --- |
+| ![RGB](../assets/research/real-rgb.png) | ![分割标注](../assets/research/real-labels.png) |
 
-以上链接分别指向仿真数据集与真实多模态数据集的数据卡。正式名称、版本、许可、下载方式、数据划分与引用格式以对应数据卡为准。
+### 数据集统计对比
+
+![PPT 中的数据集统计表](../assets/research/dataset-comparison.png)
+
+<sub>来源：展示 PPT 第 7–11、13–14 页。规模采用 PPT 口径；GRUtopia 资源平台总规模不计为 RoboMM-Syn 数据规模。下载文件、划分与许可以数据集页面为准。</sub>
