@@ -1,6 +1,6 @@
 # BudVLN：回溯校正与在线训练
 
-[返回 VLN](README.md) · [实验室主页](../README.md) · [开源项目](https://6zyyy.github.io/BudVLN/)
+[返回具身导航模型](README.md) · [实验室主页](../README.md) · [开源项目](https://6zyyy.github.io/BudVLN/)
 
 *Nipping the Drift in the Bud: Retrospective Rectification for Robust Vision-Language Navigation*
 

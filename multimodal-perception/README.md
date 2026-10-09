@@ -34,18 +34,3 @@
 ![MDV-Fusion 多退化场景融合结果](../assets/research/mdv-comparison.png)
 
 [完整指标表与实验设置 →](degraded-video-fusion.md)
-
-## 建图导航与未知环境探索
-
-| 模块 | 配置 |
-| --- | --- |
-| 输入 | RGB-D、激光雷达、IMU、轮式里程计 |
-| 建图定位 | 前端匹配、后端优化、回环检测、地图构建 |
-| 已展示规划算法 | A* 全局规划、DWA 局部规划 |
-| 探索展示 | 仿真环境自主探索 |
-
-![多模态融合建图与自主导航系统架构](../assets/showcase/mapping-navigation-framework.png)
-
-| 建图与路径规划 | 未知环境仿真探索 |
-| --- | --- |
-| ![建图动画](../assets/research/mapping-demo.gif) | ![探索动画](../assets/research/exploration-simulation.gif) |

@@ -1,4 +1,4 @@
-# 视觉语言导航 VLN
+# 具身导航模型
 
 [返回主页](../README.md)
 
@@ -6,6 +6,7 @@
 | --- | --- | --- |
 | BudVLN | 回溯校正、GRPO / SFT 动态在线学习 | [算法框架与导航结果](online-nav-training.md) |
 | VeSTA | 严格接触反馈、候选轨迹优化、可通行风险评估 | [框架与无碰撞导航结果](collision-aware-navigation.md) |
+| 建图导航与未知环境探索 | 多传感器建图定位、路径规划、自主探索 | [系统框架与动态演示](#建图导航与未知环境探索) |
 
 ## 语言指令实机演示
 
@@ -39,3 +40,18 @@
 | 跨房间 | 30% | 45% |
 
 [严格接触仿真测试与实机结果 →](collision-aware-navigation.md)
+
+## 建图导航与未知环境探索
+
+| 模块 | 配置 |
+| --- | --- |
+| 输入 | RGB-D、激光雷达、IMU、轮式里程计 |
+| 建图定位 | 前端匹配、后端优化、回环检测、地图构建 |
+| 已展示规划算法 | A* 全局规划、DWA 局部规划 |
+| 探索展示 | 仿真环境自主探索 |
+
+![多模态融合建图与自主导航系统架构](../assets/showcase/mapping-navigation-framework.png)
+
+| 建图与路径规划 | 未知环境仿真探索 |
+| --- | --- |
+| ![建图动画](../assets/research/mapping-demo.gif) | ![探索动画](../assets/research/exploration-simulation.gif) |

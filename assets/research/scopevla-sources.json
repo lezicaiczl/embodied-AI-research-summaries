@@ -1,0 +1,12 @@
+{
+  "source": "45647_ScopeVLA_Task_Grounded_a.pdf",
+  "figures": [
+    {"file": "scopevla-framework.png", "page": 3, "figure": 1},
+    {"file": "scopevla-spatial-conditioning.png", "page": 6, "figure": 3},
+    {"file": "scopevla-calvin.png", "page": 7, "table": 1},
+    {"file": "scopevla-libero-plus.png", "page": 8, "table": 2},
+    {"file": "scopevla-real-tasks.png", "page": 8, "figure": 4},
+    {"file": "scopevla-real-results.png", "page": 8, "table": 3},
+    {"file": "scopevla-ablation.png", "page": 9, "table": 4}
+  ]
+}

@@ -1,6 +1,6 @@
 # CR-VLA：压缩鲁棒远程操作
 
-[返回 VLA](README.md) · [实验室主页](../README.md)
+[返回具身操作模型](README.md) · [实验室主页](../README.md)
 
 *CR-VLA: Compression-Robust Vision-Language-Action models for Remote Deployment*
 

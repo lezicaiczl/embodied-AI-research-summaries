@@ -1,4 +1,4 @@
-# 视觉语言动作 VLA
+# 具身操作模型
 
 [返回主页](../README.md)
 
@@ -6,6 +6,7 @@
 | --- | --- | --- |
 | 开源 VLA 部署与任务微调 | OpenVLA、π0、SmolVLA 等 | 语言指令驱动抓放、抽屉操作、组合任务 |
 | CR-VLA | 仿真与 AgileX 实机，受限带宽 | [框架、基准测试与实机结果](bandwidth-robust-control.md) |
+| ScopeVLA | 任务驱动、视角分工的空间条件建模 | [框架、基准测试与实机结果](scopevla.md) |
 
 ## 机械臂任务演示
 
@@ -28,3 +29,17 @@
 ![远程操作场景与压缩输入对比](../assets/research/crvla-real-results.png)
 
 [完整 LIBERO、CALVIN、实机对比表 →](bandwidth-robust-control.md)
+
+## ScopeVLA：任务驱动的多视角空间条件建模
+
+![ScopeVLA 算法框架](../assets/research/scopevla-framework.png)
+
+| 测试设置 | 代表结果 |
+| --- | --- |
+| CALVIN ABC→D | 五步成功率 85.3%，平均完成长度 4.62 |
+| LIBERO-Plus，从 LIBERO 零样本迁移 | 总成功率 67.4% |
+| AgileX 实机，每任务 20 次 | 芒果放盘 95%、茄子上架 85%、整理杯子 60%、收纳香蕉 80%，平均 80% |
+
+![ScopeVLA 实机任务与操作序列](../assets/research/scopevla-real-tasks.png)
+
+[完整 CALVIN、LIBERO-Plus、实机与消融实验 →](scopevla.md)

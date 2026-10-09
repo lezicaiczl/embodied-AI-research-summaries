@@ -1,6 +1,6 @@
 # VeSTA：可执行性与无碰撞导航
 
-[返回 VLN](README.md) · [实验室主页](../README.md)
+[返回具身导航模型](README.md) · [实验室主页](../README.md)
 
 *Revealing and Bridging the Physical Executability Gap in Vision-Language Navigation*
 

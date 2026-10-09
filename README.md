@@ -1,6 +1,6 @@
 # 具身智能实验室
 
-[多模态感知](multimodal-perception/README.md) · [视觉语言导航 VLN](vln/README.md) · [视觉语言动作 VLA](vla/README.md) · [开放数据集](datasets/README.md)
+[多模态感知](multimodal-perception/README.md) · [具身导航模型](vln/README.md) · [具身操作模型](vla/README.md) · [开放数据集](datasets/README.md)
 
 ## 实验室介绍
 
@@ -32,8 +32,8 @@
 | 方向 | 成果 | 图表详情 |
 | --- | --- | --- |
 | 多模态感知 | RoboMM-Syn、RC-MVSP、GDAFormer、MDV-Fusion | [数据集与算法](multimodal-perception/README.md) |
-| VLN | BudVLN、VeSTA、语言指令导航实机演示 | [框架与实验](vln/README.md) |
-| VLA | 开源模型部署与微调、CR-VLA 远程操作 | [框架与实验](vla/README.md) |
+| 具身导航模型 | BudVLN、VeSTA、建图导航与未知环境探索 | [框架与实验](vln/README.md) |
+| 具身操作模型 | 开源模型部署与微调、CR-VLA、ScopeVLA | [框架与实验](vla/README.md) |
 
 ### 多模态感知
 
@@ -52,7 +52,11 @@
 
 [数据样例、GDAFormer 与 MDV-Fusion 框架和结果 →](multimodal-perception/README.md)
 
-### 视觉语言导航 VLN
+#### 仿真多模态数据采集
+
+<p align="center"><img src="assets/research/synthetic-collection.gif" width="60%" alt="仿真数据采集动画" /></p>
+
+### 具身导航模型
 
 | 方法 | 测试设置 | 代表结果 |
 | --- | --- | --- |
@@ -67,15 +71,23 @@
 </tr>
 </table>
 
-[BudVLN、VeSTA 算法框架、对比表和轨迹图 →](vln/README.md)
+#### 建图导航与未知环境探索
 
-### 视觉语言动作 VLA
+| 建图与路径规划 | 未知环境仿真探索 |
+| --- | --- |
+| ![建图及路径规划动画](assets/research/mapping-demo.gif) | ![未知环境仿真探索动画](assets/research/exploration-simulation.gif) |
+
+[BudVLN、VeSTA、建图导航与探索的框架和结果 →](vln/README.md)
+
+### 具身操作模型
 
 | 能力 / 方法 | 设置 | 展示与结果 |
 | --- | --- | --- |
 | 开源 VLA 部署与微调 | OpenVLA、π0、SmolVLA 等 | 抽屉、物体抓放、组合餐具操作 |
 | CR-VLA | CALVIN 波动带宽 | 五步成功率 56.9%；平均完成长度 3.758 |
 | CR-VLA | AgileX 实机波动带宽，每任务 20 次 | 香蕉 80%；叠盘 65%；餐具 60%；抽屉 60% |
+| ScopeVLA | CALVIN ABC→D / LIBERO-Plus 零样本迁移 | 五步成功率 85.3%；平均完成长度 4.62 / 总成功率 67.4% |
+| ScopeVLA | AgileX 实机，每任务 20 次 | 四任务平均成功率 80% |
 
 <table>
 <tr><th>抽屉与茄子操作</th><th>组合餐具操作</th><th>香蕉放入盘子</th></tr>
@@ -86,15 +98,6 @@
 </tr>
 </table>
 
-[CR-VLA 框架、LIBERO / CALVIN 表格与实机结果 →](vla/README.md)
+![ScopeVLA 实机操作任务](assets/research/scopevla-real-tasks.png)
 
-### 数据采集、建图与探索演示
-
-<table>
-<tr><th>仿真多模态数据采集</th><th>建图与路径规划</th><th>未知环境仿真探索</th></tr>
-<tr>
-<td width="33%"><img src="assets/research/synthetic-collection.gif" width="100%" alt="仿真数据采集动画" /></td>
-<td width="33%"><img src="assets/research/mapping-demo.gif" width="100%" alt="建图及路径规划动画" /></td>
-<td width="33%"><img src="assets/research/exploration-simulation.gif" width="100%" alt="未知环境仿真探索动画" /></td>
-</tr>
-</table>
+[CR-VLA 与 ScopeVLA 的框架、实验表格和实机结果 →](vla/README.md)
