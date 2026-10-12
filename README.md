@@ -6,24 +6,7 @@
 
 面向机器人对环境的理解、自主移动与物体操作，围绕多模态感知、具身导航模型、具身操作模型三个方向开展研究，覆盖数据集构建、模型方法、仿真评估与实机验证。
 
-```mermaid
-flowchart TB
-    R["具身智能研究体系"]
-    R --- P["多模态感知<br/>环境理解与表征"]
-    R --- N["具身导航模型<br/>自主移动与探索"]
-    R --- A["具身操作模型<br/>任务理解与动作生成"]
-    P --- PD["数据集构建<br/>RoboMM-Syn · RC-MVSP<br/><br/>视频场景解析 · 多退化视频融合<br/>GDAFormer · MDV-Fusion"]
-    N --- ND["语言指令导航 · 可执行性优化<br/>BudVLN · VeSTA<br/><br/>建图定位 · 路径规划<br/>未知环境探索"]
-    A --- AD["模型部署与任务微调<br/>OpenVLA · π0 · SmolVLA<br/><br/>压缩鲁棒操作 · 多视角空间建模<br/>CR-VLA · ScopeVLA"]
-    classDef root fill:#172b4d,color:#fff,stroke:#172b4d;
-    classDef perception fill:#e8f3ff,color:#14365d,stroke:#5798d4;
-    classDef navigation fill:#e8f6ee,color:#174832,stroke:#59a87c;
-    classDef manipulation fill:#fff2e5,color:#653c18,stroke:#d79a57;
-    class R root;
-    class P,PD perception;
-    class N,ND navigation;
-    class A,AD manipulation;
-```
+![具身智能研究体系：多模态感知、具身导航模型与具身操作模型](assets/research/research-overview.png)
 
 ## 研究成果
 
