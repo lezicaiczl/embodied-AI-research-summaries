@@ -1,33 +1,31 @@
-# 具身智能实验室
+# 具身智能研究体系
 
 [多模态感知](multimodal-perception/README.md) · [具身导航模型](vln/README.md) · [具身操作模型](vla/README.md) · [开放数据集](datasets/README.md)
 
-## 实验室介绍
+## 研究体系
 
-| 场地与平台 | 配置 |
-| --- | --- |
-| 依托平台 | 西电-荣耀通信互联创新联合实验室 |
-| 居家场景 | 客厅、厨房、卧室、健身区，300+ 类物体 |
-| 机器人实验区 | 沙地、坡道、草地及室内活动区域 |
-| 硬件 | 智元 X1、宇树 G1、宇树 Go2、松灵 Piper 机械臂与轮式移动操作平台 |
+面向机器人对环境的理解、自主移动与物体操作，围绕多模态感知、具身导航模型、具身操作模型三个方向开展研究，覆盖数据集构建、模型方法、仿真评估与实机验证。
 
-<p align="center">
-<img src="assets/showcase/lab-activity-areas.png" alt="机器人实验区" height="250" />
-<img src="assets/showcase/lab-home-areas.png" alt="居家场景" height="250" />
-</p>
+```mermaid
+flowchart TB
+    R["具身智能研究体系"]
+    R --- P["多模态感知<br/>环境理解与表征"]
+    R --- N["具身导航模型<br/>自主移动与探索"]
+    R --- A["具身操作模型<br/>任务理解与动作生成"]
+    P --- PD["数据集构建<br/>RoboMM-Syn · RC-MVSP<br/><br/>视频场景解析 · 多退化视频融合<br/>GDAFormer · MDV-Fusion"]
+    N --- ND["语言指令导航 · 可执行性优化<br/>BudVLN · VeSTA<br/><br/>建图定位 · 路径规划<br/>未知环境探索"]
+    A --- AD["模型部署与任务微调<br/>OpenVLA · π0 · SmolVLA<br/><br/>压缩鲁棒操作 · 多视角空间建模<br/>CR-VLA · ScopeVLA"]
+    classDef root fill:#172b4d,color:#fff,stroke:#172b4d;
+    classDef perception fill:#e8f3ff,color:#14365d,stroke:#5798d4;
+    classDef navigation fill:#e8f6ee,color:#174832,stroke:#59a87c;
+    classDef manipulation fill:#fff2e5,color:#653c18,stroke:#d79a57;
+    class R root;
+    class P,PD perception;
+    class N,ND navigation;
+    class A,AD manipulation;
+```
 
-<table>
-<tr>
-<td width="50%" align="center"><img src="assets/showcase/humanoid-robots-x1-g1.png" width="96%" alt="智元 X1 与宇树 G1" /><br />智元 X1 · 宇树 G1</td>
-<td width="50%" align="center"><img src="assets/showcase/piper-arm.png" width="96%" alt="Piper 机械臂" /><br />松灵 Piper 机械臂</td>
-</tr>
-<tr>
-<td align="center"><img src="assets/showcase/unitree-go2.png" width="96%" alt="宇树 Go2" /><br />宇树 Go2</td>
-<td align="center"><img src="assets/showcase/piper-mobile-manipulator.png" width="96%" alt="轮式移动操作平台" /><br />Piper 轮式智能车与机械臂</td>
-</tr>
-</table>
-
-## 实验室成果
+## 研究成果
 
 | 方向 | 成果 | 图表详情 |
 | --- | --- | --- |
