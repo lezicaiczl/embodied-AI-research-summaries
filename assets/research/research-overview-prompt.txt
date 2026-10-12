@@ -1,6 +1,6 @@
 Use case: infographic-diagram.
 Create a refined premium scientific overview image for a Chinese embodied AI research GitHub homepage. Landscape 16:9, high resolution, exceptionally crisp simplified Chinese typography. Editorial research-portfolio aesthetic, airy ivory-white background, dark navy typography, restrained blue / teal / warm amber accents, fine precise lines, sophisticated subtle isometric scientific illustrations, generous whitespace. Not a screenshot, not a plain flowchart, no Mermaid-style boxes.
-Title exactly: "具身智能研究体系". Small English subtitle: "EMBODIED INTELLIGENCE".
+Title exactly: "面向开放世界的具身感知与行动智能". Small English subtitle: "OPEN-WORLD EMBODIED PERCEPTION AND ACTION".
 Three equally weighted parallel research pillars, visually organized by a delicate branching line from the title, no arrows between pillars (independent research areas).
 Left pillar title "多模态感知", subheading "环境理解与表征". Elegant illustration: aligned RGB, depth and point-cloud layers of a room. Two concise text groups: "数据集构建" then "RoboMM-Syn · RC-MVSP"; "视频解析与融合" then "GDAFormer · MDV-Fusion".
 Middle pillar title "具身导航模型", subheading "自主移动与探索". Elegant illustration: isometric indoor floorplan with trajectory and small quadruped robot. Two text groups: "语言导航与可执行性" then "BudVLN · VeSTA"; "建图定位 · 路径规划 · 未知环境探索".
